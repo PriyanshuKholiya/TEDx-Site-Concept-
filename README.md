@@ -1,0 +1,55 @@
+# TEDxUPES Website
+
+A modern, responsive website for TEDxUPES built with React and Vite.
+
+## Features
+
+- Speaker showcase
+- Registration form
+- Event rules and about pages
+- Light/dark theme toggle
+- Sticky navigation bar
+- Colorful UPES-inspired gradient accents
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16 or newer recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+```sh
+git clone https://github.com/yourusername/tedxupes.git
+cd tedxupes
+npm install
+```
+
+### Development
+
+```sh
+npm run dev
+```
+
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build for Production
+
+```sh
+npm run build
+```
+
+### Preview Production Build
+
+```sh
+npm run serve
+```
+
+## Deployment
+
+You can deploy the `dist` folder to any static hosting service (Vercel, Netlify, GitHub Pages, etc.).
+
+## License
+
+This project is for educational/demo purposes.

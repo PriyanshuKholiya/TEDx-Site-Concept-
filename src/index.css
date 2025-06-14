@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.page h1, .page h2, .page h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.page ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Light theme support */
+.app-container.light-theme,
+.app-container.light-theme .page {
+  background: #f8f8f8;
+  color: #181818;
+}
+
+.app-container.light-theme .page h1,
+.app-container.light-theme .page h2,
+.app-container.light-theme .page h3 {
+  color: #181818;
+}
+
+.app-container.light-theme input,
+.app-container.light-theme textarea {
+  background: #fff;
+  color: #181818;
+}
+
+/* Footer always dark, regardless of theme */
+.tedx-footer {
+  background: #111 !important;
+  color: #fff !important;
+  margin-top: auto;
+}
+
+.footer-logo,
+.footer-links h4,
+.footer-link,
+.footer-copy {
+  color: #fff !important;
+}
+
+.footer-link:hover {
+  color: #e62b1e !important;
+}
+
+.speakers-list {
+  /* Add a subtle background for the speakers section */
+  background: #f4f4f4;
+  border-radius: 18px;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.app-container.light-theme .speakers-list {
+  background: #fff;
+}
+
+.speaker-card {
+  background: #fff;
+  color: #181818;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0001;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #ececec;
+}
+
+.speaker-card:hover {
+  box-shadow: 0 6px 24px #e62b1e22;
+  transform: translateY(-4px) scale(1.03);
+}
+
+.speaker-card h3 {
+  color: #e62b1e;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-card div[style*="fontWeight:'bold'"] {
+  color: #555;
+}
+
+.speaker-card div[style*="fontSize:'0.95rem'"] {
+  color: #222;
+}
+
+.app-container.light-theme .speaker-card {
+  background: #fafafa;
+  color: #181818;
+  border: 1px solid #e0e0e0;
+}
+
+.app-container.light-theme .speaker-card h3 {
+  color: #e62b1e;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
