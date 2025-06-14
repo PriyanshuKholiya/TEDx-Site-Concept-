@@ -2,17 +2,6 @@
 
 A modern, responsive website for TEDxUPES built with React and Vite.
 
-## Features
-
-- Speaker showcase
-- Registration form
-- Event rules and about pages
-- Light/dark theme toggle
-- Sticky navigation bar
-- Colorful UPES-inspired gradient accents
-
-## Getting Started
-
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v16 or newer recommended)
