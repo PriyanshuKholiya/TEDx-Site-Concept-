@@ -7,7 +7,7 @@ export default function Rules() {
         <li>All attendees must register prior to the event.</li>
         <li>Maintain decorum and respect all speakers and participants.</li>
         <li>No recording or live streaming without permission.</li>
-        <li>Follow all COVID-19 safety protocols as applicable.</li>
+        <li>Follow all safety protocols as applicable.</li>
         <li>Contact the organizing team for any queries.</li>
       </ul>
     </div>
