@@ -3,9 +3,15 @@
 body {
   margin: 0;
   padding: 0;
-  background: #111;
-  color: #fff;
+  background: #f8f8f8;
+  color: #181818;
   font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.app-container,
+.app-container .page {
+  background: #f8f8f8;
+  color: #181818;
 }
 
 .app-container {
@@ -38,6 +44,7 @@ body {
   margin-bottom: 2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  color: #181818;
 }
 
 .page ul {
@@ -45,21 +52,8 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Light theme support */
-.app-container.light-theme,
-.app-container.light-theme .page {
-  background: #f8f8f8;
-  color: #181818;
-}
-
-.app-container.light-theme .page h1,
-.app-container.light-theme .page h2,
-.app-container.light-theme .page h3 {
-  color: #181818;
-}
-
-.app-container.light-theme input,
-.app-container.light-theme textarea {
+input,
+textarea {
   background: #fff;
   color: #181818;
 }

@@ -1,49 +1,38 @@
-import { useState } from "react";
+import React from 'react';
 
-export default function Registration() {
-  const [registered, setRegistered] = useState(false);
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    setRegistered(true);
-  }
-
+export default function Nomination() {
   return (
-    <div className="page registration">
-      <h1>Register for TED<span style={{color:'#e62b1e'}}>x</span>UPES</h1>
+    <div className="page nomination" style={{ textAlign: 'center', marginTop: '4rem', minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <h1>Nominate Now for TEDxSGNS Youth</h1>
       <div className="upes-gradient-bar section-bar" />
-      {registered ? (
-        <div style={{
-          background: "#222",
-          color: "#e62b1e",
-          padding: "1.2rem 2rem",
-          borderRadius: "8px",
-          fontWeight: "bold",
-          fontSize: "1.2rem",
-          margin: "2rem auto",
-          maxWidth: "400px",
-          boxShadow: "0 2px 8px #0003",
-          textAlign: "center"
-        }}>
-          🎉 Successfully registered for TEDxUPES!<br />Check your email for confirmation.
-        </div>
-      ) : (
-        <form
-          style={{
-            maxWidth: "400px",
-            margin: "2rem auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem"
-          }}
-          onSubmit={handleSubmit}
-        >
-          <input type="text" placeholder="Full Name" required style={{padding:'0.7rem',borderRadius:'4px',border:'none'}} />
-          <input type="email" placeholder="Email" required style={{padding:'0.7rem',borderRadius:'4px',border:'none'}} />
-          <input type="text" placeholder="University/College" required style={{padding:'0.7rem',borderRadius:'4px',border:'none'}} />
-          <button type="submit" style={{background:'#e62b1e',color:'#fff',padding:'0.7rem',border:'none',borderRadius:'4px',fontWeight:'bold'}}>Register</button>
-        </form>
-      )}
+      <p style={{ maxWidth: 600, margin: '1.5rem auto', fontSize: '1.15rem' }}>
+      <br />
+        If you wish to nominate someone for TEDxSGNS Youth, please use the link below:
+      </p>
+      <a
+        href="https://forms.gle/BwBRU2YL4W51ocfQ7"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: 'inline-block',
+          margin: '2rem 0',
+          padding: '1rem 2rem',
+          background: '#e62b1e',
+          color: '#fff',
+          borderRadius: '5px',
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          fontSize: '1.2rem'
+        }}
+      >
+        Go to Nomination Form
+      </a>
+      <p>
+        <small>
+          If the link does not open, copy and paste this URL into your browser:<br />
+          https://forms.gle/BwBRU2YL4W51ocfQ7
+        </small>
+      </p>
     </div>
   );
 }

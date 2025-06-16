@@ -1,6 +1,6 @@
-# TEDxUPES Website
+# TEDxSGNS Youth Website
 
-A modern, responsive website for TEDxUPES built with React and Vite.
+A modern, responsive website for TEDxSGNS Youth built with React and Vite.
 
 ### Prerequisites
 
@@ -10,8 +10,8 @@ A modern, responsive website for TEDxUPES built with React and Vite.
 ### Installation
 
 ```sh
-git clone https://github.com/yourusername/tedxupes.git
-cd tedxupes
+git clone https://github.com/yourusername/tedxsgns.git
+cd tedxsgns
 npm install
 ```
 
