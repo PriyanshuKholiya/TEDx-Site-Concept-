@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./HomeCarousel.css";
 
@@ -43,15 +43,39 @@ const speakers = [
 
 export default function Home() {
 	const navigate = useNavigate();
+	const heroRef = useRef(null);
+
+	// Fade-in animation for hero
+	useEffect(() => {
+		const el = heroRef.current;
+		if (!el) return;
+		const obs = new window.IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) el.classList.add('fade-in');
+			},
+			{ threshold: 0.2 }
+		);
+		obs.observe(el);
+		return () => obs.disconnect();
+	}, []);
 
 	const handleTellMeMore = () => {
-		const section = document.getElementById("what-is-ted");
+		const section = document.getElementById("theme-section");
 		if (section) section.scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
 		<div className="page home home-centered modern-home light-theme" style={{ padding: 0, minHeight: 0 }}>
-			<div className="home-hero-bg" style={{ minHeight: "92vh", height: "92vh", maxHeight: "none", position: "relative" }}>
+			<div
+				className="home-hero-bg"
+				ref={heroRef}
+				style={{
+					minHeight: "92vh",
+					height: "92vh",
+					maxHeight: "none",
+					position: "relative"
+				}}
+			>
 				<img
 					className="home-bg-img"
 					src="R.jpeg"
@@ -174,12 +198,18 @@ export default function Home() {
 				</div>
 			</div>
 			<div className="upes-gradient-bar" />
+
+			{/* TED/TEDx/TEDxSGNS Youth section */}
 			<section
 				className="tedx-sections"
 				id="what-is-ted"
 				style={{
 					color: "#181818",
-					background: "none"
+					background: "none",
+					margin: "2.5rem auto",
+					maxWidth: "900px",
+					width: "100%",
+					padding: 0
 				}}
 			>
 				<div className="tedx-section" style={{
@@ -187,7 +217,9 @@ export default function Home() {
 					color: "#181818",
 					boxShadow: "0 2px 16px #e62b1e11",
 					border: "1px solid #f2f2f2",
-					marginBottom: "2.5rem"
+					marginBottom: "2.5rem",
+					borderRadius: "18px",
+					padding: "2.5rem"
 				}}>
 					<h2>
 						What is <span style={{ color: "#e62b1e" }}>TED</span>?
@@ -206,7 +238,9 @@ export default function Home() {
 					color: "#181818",
 					boxShadow: "0 2px 16px #e62b1e11",
 					border: "1px solid #f2f2f2",
-					marginBottom: "2.5rem"
+					marginBottom: "2.5rem",
+					borderRadius: "18px",
+					padding: "2.5rem"
 				}}>
 					<h2>
 						What is <span style={{ color: "#e62b1e" }}>TEDx</span>?
@@ -223,7 +257,10 @@ export default function Home() {
 					background: "#fff",
 					color: "#181818",
 					boxShadow: "0 2px 16px #e62b1e11",
-					border: "1px solid #f2f2f2"
+					border: "1px solid #f2f2f2",
+					marginBottom: 0,
+					borderRadius: "18px",
+					padding: "2.5rem"
 				}}>
 					<h2>
 						What is <span style={{ color: "#e62b1e" }}>TEDxSGNS Youth</span>?
@@ -235,18 +272,51 @@ export default function Home() {
 					<div className="tedx-theme">
 						<strong>2025 Theme:</strong>{" "}
 						<span style={{ color: "#e62b1e" }}>Reimagine Diversity</span>
-						<div
-							style={{
-								fontSize: "1rem",
-								color: "#444",
-								marginTop: "0.5rem",
-							}}
-						>
-							At TEDxSGNS Youth, this year’s theme, "Reimagine Diversity," is not just a call to reflect — it's a challenge to rethink, reconstruct, and revolutionize how we understand inclusion and identity in a changing world. Diversity today goes far beyond checklists or superficial representation. It's about creating spaces where differences are not just accepted but celebrated as the very foundation of creativity, resilience, and growth.
-						</div>
+						{/* You may remove or shorten the brief theme blurb here if desired, since the full section is above */}
 					</div>
 				</div>
 			</section>
+
+			{/* THEME SECTION MOVED HERE, margin matches above */}
+			<section
+				id="theme-section"
+				style={{
+					background: "#fff",
+					color: "#181818",
+					boxShadow: "0 2px 16px #e62b1e11",
+					border: "1px solid #f2f2f2",
+					margin: "2.5rem auto",
+					maxWidth: "900px",
+					borderRadius: "18px",
+					padding: "2.5rem"
+				}}
+			>
+				<h2>
+					Theme: <span style={{ color: "#e62b1e" }}>Reimagine Diversity</span>
+				</h2>
+				<div className="upes-gradient-bar section-bar" />
+				<p>
+					At TEDxSGNS Youth, this year’s theme, "Reimagine Diversity," is not just a call to reflect — it's a challenge to rethink, reconstruct, and revolutionize how we understand inclusion and identity in a changing world. Diversity today goes far beyond checklists or superficial representation. It's about creating spaces where differences are not just accepted but celebrated as the very foundation of creativity, resilience, and growth.
+				</p>
+				<p>
+					To "reimagine" is to move past inherited assumptions — about race, gender, ability, culture, orientation, socio-economic background, or learning style — and to embrace the possibility that true innovation emerges from the intersections of our varied experiences. Whether it's within classrooms, workplaces, homes, or communities, the theme encourages us to see diversity as a mindset — a lens through which we approach problem-solving, leadership, empathy, and storytelling.
+				</p>
+				<p>
+					"Reimagine Diversity" dares us to look at what has been invisible: the quiet voices, the unconventional thinkers, the misfits, the unheard narratives — and bring them into the spotlight. It is a theme that opens the door to conversations about neurodiversity, intersectionality, global cultures, gender fluidity, differing abilities, and beyond. By doing so, we aim to foster environments where everyone has the right not just to participate but to thrive.
+				</p>
+				<p>
+					This theme is especially timely in a world where the boundaries of identity are increasingly fluid and where the need for empathy, understanding, and equity has never been greater. At TEDxSGNS Youth, we envision a platform where young changemakers, innovators, creators, and dreamers come together to redefine what inclusion looks like — and to spark a movement that values differences not as obstacles, but as opportunities.
+				</p>
+				<p>
+					Through talks that challenge norms, ideas that defy stereotypes, and stories that expand horizons, "Reimagine Diversity" becomes more than just a theme — it becomes a transformative experience. One that reshapes how we lead, learn, create, and connect.
+				</p>
+				<p>
+					Let’s reimagine who gets to speak. Let’s reimagine who gets to lead.<br />
+					Let’s reimagine diversity — together.
+				</p>
+			</section>
+			{/* THEME SECTION END */}
+
 			{/* Divider above speakers */}
 			<div style={{
 				width: "100%",
@@ -262,7 +332,7 @@ export default function Home() {
 					borderRadius: "18px",
 					margin: "2.5rem auto 2.5rem auto",
 					padding: "2.5rem 1.5rem 2.5rem 1.5rem",
-					maxWidth: "92vw",
+					maxWidth: "92vw", // restored to previous value for full carousel width
 					width: "calc(100% - 4vw)",
 					position: "relative"
 				}}
