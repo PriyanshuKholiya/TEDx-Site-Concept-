@@ -110,7 +110,7 @@ export default function Home() {
 						width: "100vw",
 						height: "100vh",
 						objectFit: "cover",
-						objectPosition: "center",
+						objectPosition: "center 30%", // Move image up a bit for better focus
 						filter: "none",
 						WebkitFilter: "none",
 						zIndex: 1,
@@ -119,7 +119,7 @@ export default function Home() {
 						top: 0
 					}}
 				/>
-				{/* Remove or lighten overlay for more clarity */}
+				{/* Light overlay for readability */}
 				<div style={{
 					position: "absolute",
 					left: 0, top: 0, width: "100%", height: "100%",
@@ -156,7 +156,7 @@ export default function Home() {
 									textAlign: "left"
 								}}
 							>
-								Reimagine <span style={{ color: "#e62b1e" }}>Diversity</span>
+								<span style={{ color: "#fff" }}>Reimagine</span> <span style={{ color: "#e62b1e" }}>Diversity</span>
 							</h1>
 							<div style={{
 								fontSize: "1.25rem",
@@ -229,7 +229,23 @@ export default function Home() {
 									fontSize: "1.13rem",
 									textDecoration: "none",
 									letterSpacing: ".5px",
-									boxShadow: "0 2px 8px #e62b1e22"
+									boxShadow: "0 2px 8px #e62b1e22",
+									transition: "background 0.18s, transform 0.18s, box-shadow 0.18s",
+									cursor: "pointer"
+								}}
+								onMouseOver={e => {
+									e.currentTarget.style.background = "#fff";
+									e.currentTarget.style.color = "#e62b1e";
+									e.currentTarget.style.transform = "translateY(-2px) scale(1.04)";
+									e.currentTarget.style.boxShadow = "0 4px 16px #e62b1e33";
+									e.currentTarget.style.border = "2px solid #e62b1e";
+								}}
+								onMouseOut={e => {
+									e.currentTarget.style.background = "#e62b1e";
+									e.currentTarget.style.color = "#fff";
+									e.currentTarget.style.transform = "none";
+									e.currentTarget.style.boxShadow = "0 2px 8px #e62b1e22";
+									e.currentTarget.style.border = "none";
 								}}
 								onClick={e => { e.preventDefault(); navigate("/nomination"); }}
 							>
@@ -364,13 +380,14 @@ export default function Home() {
 			{/* THEME SECTION END */}
 
 			{/* Divider above speakers */}
-			<div style={{
-				width: "100%",
-				maxWidth: "900px",
-				margin: "2.5rem auto 0 auto",
-				borderTop: "2px dashed #e62b1e33",
-				opacity: 0.7
-			}} />
+			<div
+				className="slim-animated-divider"
+				style={{
+					width: "100%",
+					maxWidth: "900px",
+					margin: "2.5rem auto 0 auto"
+				}}
+			/>
 			<div
 				style={{
 					background: "linear-gradient(90deg, #fff 0%, #f9f9f9 100%)",

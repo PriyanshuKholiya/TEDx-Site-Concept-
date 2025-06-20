@@ -10,6 +10,24 @@ export default function Rules() {
         <li>Follow all safety protocols as applicable.</li>
         <li>Contact the organizing team for any queries.</li>
       </ul>
+      <div style={{margin: "2.5rem 0 1.5rem 0", width: "100%", maxWidth: 700}}>
+        <h2 style={{fontSize: "1.25rem", marginBottom: "1rem", color: "#e62b1e"}}>Find Us</h2>
+        <div style={{borderRadius: "12px", overflow: "hidden", boxShadow: "0 2px 16px #0002"}}>
+          <iframe
+            title="SGNS School Location"
+            src="https://www.google.com/maps?q=Shanti+Gyan+Niketan+Sr.+Sec.+Public+School,+Goyla+Dairy+Road,+Near+Punjab+National+Bank,+Goyla+Khurd,+Delhi+110071&output=embed"
+            width="100%"
+            height="340"
+            style={{border: 0}}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div style={{marginTop: "0.7rem", fontSize: "1rem", color: "#444"}}>
+          <strong>Address:</strong> Shanti Gyan Niketan Sr. Sec. Public School, Goyla Dairy Road, Near Punjab National Bank, Goyla Khurd, Delhi 110071
+        </div>
+      </div>
     </div>
   );
 }
