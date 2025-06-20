@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import "./HomeCarousel.css";
 
@@ -44,6 +44,7 @@ const speakers = [
 export default function Home() {
 	const navigate = useNavigate();
 	const heroRef = useRef(null);
+	const [fixedHero, setFixedHero] = useState(false);
 
 	// Fade-in animation for hero
 	useEffect(() => {
@@ -59,6 +60,24 @@ export default function Home() {
 		return () => obs.disconnect();
 	}, []);
 
+	// Sticky hero effect: fix hero image while text scrolls, then unfix when out of section
+	useEffect(() => {
+		const handleScroll = () => {
+			const hero = heroRef.current;
+			if (!hero) return;
+			const rect = hero.getBoundingClientRect();
+			const windowHeight = window.innerHeight;
+			// When hero top is at 0 and bottom is below viewport, fix the hero
+			if (rect.top <= 0 && rect.bottom > windowHeight + 60) {
+				setFixedHero(true);
+			} else {
+				setFixedHero(false);
+			}
+		};
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
 	const handleTellMeMore = () => {
 		const section = document.getElementById("theme-section");
 		if (section) section.scrollIntoView({ behavior: "smooth" });
@@ -67,29 +86,52 @@ export default function Home() {
 	return (
 		<div className="page home home-centered modern-home light-theme" style={{ padding: 0, minHeight: 0 }}>
 			<div
-				className="home-hero-bg"
+				className={`home-hero-bg${fixedHero ? " home-hero-fixed" : ""}`}
 				ref={heroRef}
 				style={{
 					minHeight: "92vh",
 					height: "92vh",
 					maxHeight: "none",
-					position: "relative"
+					position: fixedHero ? "fixed" : "relative",
+					top: fixedHero ? 0 : undefined,
+					left: fixedHero ? 0 : undefined,
+					width: fixedHero ? "100vw" : undefined,
+					zIndex: fixedHero ? 20 : undefined,
+					transition: "box-shadow 0.3s",
+					boxShadow: fixedHero ? "0 8px 32px #0003" : undefined,
+					overflow: "hidden"
 				}}
 			>
 				<img
 					className="home-bg-img"
 					src="R.jpeg"
 					alt="SGNS Dwarka"
+					style={{
+						width: "100vw",
+						height: "100vh",
+						objectFit: "cover",
+						objectPosition: "center",
+						filter: "none",
+						WebkitFilter: "none",
+						zIndex: 1,
+						position: "absolute",
+						left: 0,
+						top: 0
+					}}
 				/>
-				{/* Gradient overlay for depth */}
+				{/* Remove or lighten overlay for more clarity */}
 				<div style={{
 					position: "absolute",
 					left: 0, top: 0, width: "100%", height: "100%",
-					background: "linear-gradient(120deg, rgba(230,43,30,0.10) 0%, rgba(255,255,255,0.55) 100%)",
+					background: "linear-gradient(120deg, rgba(230,43,30,0.04) 0%, rgba(255,255,255,0.10) 100%)",
 					zIndex: 2,
 					pointerEvents: "none"
 				}} />
-				<div className="home-hero-glass" style={{ background: "rgba(24,24,24,0.10)", backdropFilter: "blur(2.5px) saturate(1.1)", zIndex: 3 }}>
+				<div className="home-hero-glass" style={{
+					background: "transparent",
+					backdropFilter: "none",
+					zIndex: 3
+				}}>
 					<div
 						className="home-hero-content"
 						style={{
@@ -197,6 +239,10 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			{/* Add a spacer div to prevent layout jump when hero is fixed */}
+			{fixedHero && (
+				<div style={{ height: "92vh", width: "100%" }} />
+			)}
 			<div className="animated-gradient-divider" />
 
 			{/* TED/TEDx/TEDxSGNS Youth section */}
