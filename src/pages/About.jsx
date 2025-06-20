@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="page about" style={{minHeight: "70vh", maxWidth: 800, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
       <h1>About TED<span style={{color:'#e62b1e'}}>x</span>SGNS Youth</h1>
-      <div className="upes-gradient-bar section-bar" />
+      <div className="animated-gradient-divider section-bar" />
       <p>
         <strong>About SGNS</strong><br />
         Shanti Gyan Niketan Sr. Sec. School, the proud host of TEDxSGNS Youth, has been a leading institution in nurturing holistic development for decades. Situated in the heart of Dwarka, the school combines academic excellence with a culture of social responsibility and innovation. Our institution believes that meaningful change begins with empowered young minds — and TEDxSGNS Youth is a manifestation of that belief.

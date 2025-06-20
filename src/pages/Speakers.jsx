@@ -59,7 +59,7 @@ export default function Speakers() {
   return (
     <div className="page speakers">
       <h1>Meet Our Speakers</h1>
-      <div className="gradient-bar section-bar" />
+      <div className="animated-gradient-divider section-bar" />
       <div
         className="speakers-list"
         style={{

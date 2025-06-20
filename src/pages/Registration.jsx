@@ -4,7 +4,7 @@ export default function Nomination() {
   return (
     <div className="page nomination" style={{ textAlign: 'center', marginTop: '4rem', minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       <h1>Nominate Now for TEDxSGNS Youth</h1>
-      <div className="upes-gradient-bar section-bar" />
+      <div className="animated-gradient-divider section-bar" />
       <p style={{ maxWidth: 600, margin: '1.5rem auto', fontSize: '1.15rem' }}>
       <br />
         If you wish to nominate someone for TEDxSGNS Youth, please use the link below:

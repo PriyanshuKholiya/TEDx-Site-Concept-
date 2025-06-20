@@ -197,7 +197,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className="upes-gradient-bar" />
+			<div className="animated-gradient-divider" />
 
 			{/* TED/TEDx/TEDxSGNS Youth section */}
 			<section
@@ -224,7 +224,7 @@ export default function Home() {
 					<h2>
 						What is <span style={{ color: "#e62b1e" }}>TED</span>?
 					</h2>
-					<div className="upes-gradient-bar section-bar" />
+					<div className="animated-gradient-divider section-bar" />
 					<p>
 						TED is a nonprofit devoted to spreading ideas, usually in the form of
 						short, powerful talks. TED began in 1984 as a conference where
@@ -245,7 +245,7 @@ export default function Home() {
 					<h2>
 						What is <span style={{ color: "#e62b1e" }}>TEDx</span>?
 					</h2>
-					<div className="upes-gradient-bar section-bar" />
+					<div className="animated-gradient-divider section-bar" />
 					<p>
 						TEDx is a program of local, self-organized events that bring people
 						together to share a TED-like experience. At a TEDx event, TED Talks
@@ -265,7 +265,7 @@ export default function Home() {
 					<h2>
 						What is <span style={{ color: "#e62b1e" }}>TEDxSGNS Youth</span>?
 					</h2>
-					<div className="upes-gradient-bar section-bar" />
+					<div className="animated-gradient-divider section-bar" />
 					<p>
 						TEDxSGNS Youth is an independently organized TED event hosted by Shanti Gyan Niketan Sr. Sec. Public School (SGNS), Dwarka. The event brings together bright young minds, thought leaders, and changemakers to share powerful stories and fresh ideas that challenge perspectives and ignite curiosity. It is a celebration of ideas worth spreading, curated with the passion and purpose that SGNS has always stood for.
 					</p>
@@ -294,7 +294,7 @@ export default function Home() {
 				<h2>
 					Theme: <span style={{ color: "#e62b1e" }}>Reimagine Diversity</span>
 				</h2>
-				<div className="upes-gradient-bar section-bar" />
+				<div className="animated-gradient-divider section-bar" />
 				<p>
 					At TEDxSGNS Youth, this year’s theme, "Reimagine Diversity," is not just a call to reflect — it's a challenge to rethink, reconstruct, and revolutionize how we understand inclusion and identity in a changing world. Diversity today goes far beyond checklists or superficial representation. It's about creating spaces where differences are not just accepted but celebrated as the very foundation of creativity, resilience, and growth.
 				</p>

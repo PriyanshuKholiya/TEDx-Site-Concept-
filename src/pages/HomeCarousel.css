@@ -260,16 +260,43 @@ img.home-bg-img {
 .upes-gradient-bar {
   width: 100%;
   max-width: 700px;
-  height: 4px;
+  height: 8px; /* was 4px */
   margin: 0.5rem auto 1.5rem auto;
-  border-radius: 2px;
+  border-radius: 4px; /* was 2px */
   background: linear-gradient(90deg, #f9b233 0%, #e62b1e 35%, #e94e77 60%, #3a8dde 100%);
   box-shadow: 0 1px 8px #0002;
+}
+
+.animated-gradient-divider {
+  width: 100%;
+  max-width: 700px;
+  height: 8px; /* was 4px */
+  margin: 0.5rem auto 1.5rem auto;
+  border-radius: 4px; /* was 2px */
+  background: linear-gradient(90deg, #f9b233 0%, #e62b1e 35%, #e94e77 60%, #3a8dde 100%);
+  box-shadow: 0 1px 8px #0002;
+  position: relative;
+  overflow: hidden;
+}
+.animated-gradient-divider::before {
+  content: '';
+  position: absolute;
+  left: -30%;
+  top: 0; bottom: 0;
+  width: 30%;
+  background: linear-gradient(90deg, #fff8 0%, #e62b1e88 100%);
+  opacity: 0.5;
+  border-radius: 4px; /* was 2px */
+  animation: divider-move 2.2s linear infinite;
+}
+@keyframes divider-move {
+  0% { left: -30%; }
+  100% { left: 100%; }
 }
 
 .section-bar {
   margin-top: -1.2rem;
   margin-bottom: 1.2rem;
-  height: 3px;
+  height: 6px; /* was 3px */
   max-width: 180px;
 }
