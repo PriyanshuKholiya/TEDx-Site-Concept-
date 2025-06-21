@@ -147,26 +147,10 @@ export default function Home() {
 						<div className="home-hero-left" style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
 							<h1
 								className="home-hero-title"
-								style={{
-									fontSize: "3.5rem",
-									marginBottom: "1.1rem",
-									fontWeight: 900,
-									letterSpacing: "-1px",
-									fontFamily: "'Montserrat', 'Arial', sans-serif",
-									textAlign: "left"
-								}}
 							>
-								<span style={{ color: "#fff" }}>Reimagine</span> <span style={{ color: "#e62b1e" }}>Diversity</span>
+								<span style={{ color: "#fff" }}>Reimagine</span> <span className="highlight">Diversity</span>
 							</h1>
-							<div style={{
-								fontSize: "1.25rem",
-								color: "#222",
-								marginBottom: "2.2rem",
-								fontWeight: 700,
-								letterSpacing: ".5px",
-								textAlign: "left",
-								textShadow: "0 1px 8px #fff8"
-							}}>
+							<div className="home-hero-subtitle">
 								Where every difference is a new perspective.
 							</div>
 							<div className="home-hero-btns" style={{ gap: "1.5rem", display: "flex", flexWrap: "wrap" }}>

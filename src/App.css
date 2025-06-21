@@ -1,5 +1,16 @@
 /* ...existing code... */
 
+.home-hero-title .highlight {
+  color: #ff2b06 !important; /* Brighter, more visible red for 'Diversity' */
+  opacity: 1 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.home-hero-subtitle {
+  color: #222 !important; /* Much darker for subtitle */
+  opacity: 0.95 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
 @media (max-width: 768px) {
   html, body, #root, .App {
     width: 100%;
