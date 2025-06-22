@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-copy">
-        © 2025 TEDxSGNS Youth. Inspired by TEDx and TED. All rights reserved.
+        © 2025 TEDxSGNS Youth. All rights reserved.
       </div>
     </footer>
   );

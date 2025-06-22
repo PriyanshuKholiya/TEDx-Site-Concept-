@@ -78,32 +78,53 @@ export default function Speakers() {
             key={i}
             className="speaker-card"
             style={{
-              background: '#232323',
+              background: '#111',
               color: '#fff',
-              borderRadius: '12px',
-              boxShadow: '0 2px 16px #0005',
-              border: '1px solid #232323',
-              padding: '2rem 1.5rem 1.5rem 1.5rem',
-              width: '240px',
-              textAlign: 'center',
-              transition: 'box-shadow 0.2s, transform 0.2s'
+              borderRadius: '18px',
+              boxShadow: '0 8px 32px #000b',
+              border: '1.5px solid #232323',
+              padding: '1.2rem 1.2rem 1.2rem 1.2rem',
+              width: '320px',
+              minHeight: '420px',
+              textAlign: 'left',
+              position: 'relative',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-start',
+              alignItems: 'stretch'
             }}
           >
-            <img
-              src={sp.img}
-              alt={sp.name}
-              style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
-                objectFit: 'cover',
-                marginBottom: '1.2rem',
-                border: '3px solid #222'
-              }}
-            />
-            <h3 style={{ color: '#e62b1e', marginBottom: '0.5rem', fontWeight: 700 }}>{sp.name}</h3>
-            <div style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: '#bbb' }}>{sp.title}</div>
-            <div style={{ fontSize: '0.98rem', color: '#eee' }}>{sp.desc}</div>
+            <div style={{
+              width: '100%',
+              height: '180px',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              marginBottom: '1.2rem',
+              background: '#222',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+              <img
+                src={sp.img}
+                alt={sp.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  filter: 'grayscale(0) contrast(1.1)',
+                }}
+              />
+            </div>
+            <div style={{ fontSize: '2.5rem', color: '#e62b1e', fontWeight: 900, marginBottom: '1.2rem', lineHeight: 1 }}>&ldquo;</div>
+            <div style={{ fontSize: '1.25rem', color: '#e62b1e', fontWeight: 700, marginBottom: '2.2rem', lineHeight: 1.3 }}>
+              {sp.desc}
+            </div>
+            <div style={{ marginTop: 'auto' }}>
+              <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>{sp.name}</div>
+              <div style={{ color: '#e62b1e', fontWeight: 500, fontSize: '1rem' }}>{sp.title}</div>
+            </div>
           </div>
         ))}
       </div>

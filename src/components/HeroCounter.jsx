@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './pages/HomeCarousel.css';
+import '../pages/HomeCarousel.css';
 
 function getTimeLeft(targetDate) {
   const now = new Date();
