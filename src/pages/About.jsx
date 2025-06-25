@@ -2,7 +2,9 @@ export default function About() {
   return (
     <div className="page about" style={{minHeight: "70vh", maxWidth: 800, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative"}}>
       <div style={{position: "relative", zIndex: 1, width: "100%"}}>
-        <h1>About TED<span style={{color:'#e62b1e'}}>x</span>SGNS Youth</h1>
+        <h1 style={{ fontSize: '2.4rem', fontWeight: 800, textAlign: 'center', marginBottom: '2rem' }}>
+          About TED<span style={{color:'#e62b1e'}}>x</span>SGNS Youth
+        </h1>
         <div className="animated-gradient-divider section-bar" />
         <div style={{ position: "relative", width: "100%", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
           {/* Watermark logo in the center, behind About SGNS content */}
@@ -52,7 +54,7 @@ export default function About() {
         </div>
         <div style={{height: "3rem"}}></div>
         <section className="theme-section">
-          <h2 style={{ textAlign: 'center', fontWeight: 800, fontSize: '2.4rem', marginTop: '2.5rem' }}>
+          <h2 style={{ textAlign: 'center', fontWeight: 800, fontSize: '2.4rem', marginTop: '2.5rem', marginBottom: '2rem' }}>
             Theme: <span style={{ color: '#e62b1e' }}>Reimagine Diversity</span>
           </h2>
           <div className="upes-gradient-bar" style={{ width: '60%', height: '8px', margin: '1.2rem auto 2.2rem auto', borderRadius: '6px' }} />

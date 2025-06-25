@@ -2,32 +2,39 @@ export default function Rules() {
   return (
     <div className="page rules" style={{minHeight: "60vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
       <h1>Event Rules & Guidelines</h1>
-      <div className="animated-gradient-divider section-bar" />
-      <ul style={{maxWidth:'600px',margin:'2rem auto',fontSize:'1.1rem',color:'inherit', textAlign:'left', lineHeight: 1.7}}>
+      <div className="animated-gradient-divider section-bar" style={{ marginTop: "0.2rem", marginBottom: "1.1rem" }} />
+      <ul style={{
+        maxWidth: '900px',
+        margin: '2rem auto',
+        fontSize: '1.1rem',
+        color: 'inherit',
+        textAlign: 'left',
+        lineHeight: 1.7
+      }}>
         <li>All attendees must register prior to the event.</li>
         <li>Maintain decorum and respect all speakers and participants.</li>
         <li>No recording or live streaming without permission.</li>
         <li>Follow all safety protocols as applicable.</li>
         <li>Contact the organizing team for any queries.</li>
       </ul>
-      <div style={{margin: "2.5rem 0 1.5rem 0", width: "100%", maxWidth: 700}}>
-        <h2 style={{fontSize: "1.25rem", marginBottom: "1rem", color: "#e62b1e"}}>Find Us</h2>
-        <div style={{borderRadius: "12px", overflow: "hidden", boxShadow: "0 2px 16px #0002"}}>
-          <iframe
-            title="SGNS School Location"
-            src="https://www.google.com/maps?q=Shanti+Gyan+Niketan+Sr.+Sec.+Public+School,+Goyla+Dairy+Road,+Near+Punjab+National+Bank,+Goyla+Khurd,+Delhi+110071&output=embed"
-            width="100%"
-            height="340"
-            style={{border: 0}}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div style={{marginTop: "0.7rem", fontSize: "1rem", color: "#444"}}>
-          <strong>Address:</strong> Shanti Gyan Niketan Sr. Sec. Public School, Goyla Dairy Road, Near Punjab National Bank, Goyla Khurd, Delhi 110071
-        </div>
-      </div>
+      <h1 style={{marginTop: "4rem"}}>Safety & Security</h1>
+      <div className="animated-gradient-divider section-bar" style={{ marginTop: "0.2rem", marginBottom: "1.1rem" }} />
+      <ul style={{
+        maxWidth: '900px',
+        margin: '2rem auto',
+        fontSize: '1.1rem',
+        color: 'inherit',
+        textAlign: 'left',
+        lineHeight: 1.7
+      }}>
+        <li>As security checks are conducted, kindly assist the police and private security officers.</li>
+        <li>To protect your safety, the organisers reserve the right to stop and search anyone entering the event.</li>
+        <li>Consuming any illegal substances is strictly prohibited.</li>
+        <li>It is completely forbidden to carry food, drink, cigarettes, firearms, inflammables, and illegal drugs.</li>
+        <li>The organiser disclaims liability for any injury, loss, or theft of the ticket holder's personal property.</li>
+        <li>If there is any type of behavioural infraction, any person may be asked to leave the venue without being responsible for a refund. This choice is final and legally binding and lies with the conference and venue management.</li>
+        <li>Attendees are expected to follow all general venue and attendee guidelines.</li>
+      </ul>
     </div>
   );
 }

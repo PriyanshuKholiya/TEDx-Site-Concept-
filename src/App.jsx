@@ -7,6 +7,7 @@ import Nomination from './pages/Registration';
 import Rules from './pages/Rules';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/nomination" element={<Nomination />} />
           <Route path="/rules" element={<Rules />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
       <Footer />

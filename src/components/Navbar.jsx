@@ -25,6 +25,7 @@ export default function Navbar() {
         <li><NavLink to="/speakers">Speakers</NavLink></li>
         <li><NavLink to="/nomination">Nomination</NavLink></li>
         <li><NavLink to="/rules">Rules</NavLink></li>
+        <li><NavLink to="/contact">Contact</NavLink></li>
       </ul>
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
@@ -45,6 +46,7 @@ export default function Navbar() {
             <li><NavLink to="/speakers" onClick={() => setMobileMenuOpen(false)}>Speakers</NavLink></li>
             <li><NavLink to="/nomination" onClick={() => setMobileMenuOpen(false)}>Nomination</NavLink></li>
             <li><NavLink to="/rules" onClick={() => setMobileMenuOpen(false)}>Rules</NavLink></li>
+            <li><NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink></li>
           </ul>
         </div>
       )}
