@@ -146,16 +146,17 @@ export default function Home() {
 									Where every difference is a new perspective.
 								</div>
 								<div className="home-hero-btns" style={{ gap: "1.5rem", display: "flex", flexWrap: "wrap" }}>
-									<button className="home-red-btn modern-btn" onClick={handleTellMeMore}>
-										TELL ME MORE
-									</button>
 									<button
 										className="home-red-btn modern-btn"
 										style={{
 											background: "linear-gradient(90deg, #eb0028 60%, #ff5e3a 100%)",
 											color: "#fff",
 											border: "none",
-											fontWeight: 700
+											fontWeight: 700,
+											fontSize: "1.25rem",
+											padding: "1.15rem 2.8rem",
+											borderRadius: "2.2rem",
+											minWidth: "180px"
 										}}
 										onClick={() => navigate("/about")}
 									>
@@ -432,3 +433,4 @@ export default function Home() {
 		</>
 	);
 }
+
