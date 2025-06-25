@@ -4,42 +4,32 @@ import "./HomeCarousel.css";
 import HeroCounter from '../components/HeroCounter';
 
 const speakers = [
-	{
-		name: "Dr. Asha Sharma",
-		img: "https://images.pexels.com/photos/1181696/pexels-photo-1181696.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // female professor
-	},
-	{
-		name: "Rahul Verma",
-		img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // male professor
-	},
-	{
-		name: "Priya Singh",
-		img: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // female professor
-	},
-	{
-		name: "Amitabh Joshi",
-		img: "https://images.pexels.com/photos/1707828/pexels-photo-1707828.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // updated to a formal male professor
-	},
-	{
-		name: "Sunita Patel",
-		img: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // female professor
-	},
-	{
-		name: "Dr. Kavita Rao",
-		img: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // female professor (repeat for diversity)
-	},
-	{
-		name: "Manoj Nair",
-		img: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // male professor
-	},
-	{
-		name: "Meena Kumari",
-		img: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // female professor (repeat for diversity)
-	},
-	{
-		name: "Suresh Iyer",
-		img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&w=256&h=256&fit=facearea&facepad=2", // male professor (repeat for diversity)
-	}
+	{ name: "Aanchal Jain", img: "/Speakers/AanchalJain.jpg" },
+	{ name: "Akanksha Madan", img: "/Speakers/AkankshaMadan.jpg" },
+	{ name: "Avika Jain", img: "/Speakers/AvikaJain.jpg" },
+	{ name: "Avirat Jain", img: "/Speakers/AviratJain.jpg" },
+	{ name: "Dr. Atul Mehta", img: "/Speakers/Dr.AtulMehta.jpg" },
+	{ name: "Dr. Kiran Swami", img: "/Speakers/Dr.KiranSwami.jpg" },
+	{ name: "Dr. Mala Dasgupta Sengupta", img: "/Speakers/Dr.MalaDasguptaSengupta.jpg" },
+	{ name: "Dr. Samiksha Borele", img: "/Speakers/Dr.SamikshaBorele.jpg" },
+	{ name: "Dr. Varsha Jain", img: "/Speakers/Dr.VarshaJain.jpg" },
+	{ name: "Mahira Juneja", img: "/Speakers/MahiraJuneja.jpg" },
+	{ name: "Maithreye Murali", img: "/Speakers/MaithreyeMurali.jpg" },
+	{ name: "Mamta Chander Chandani", img: "/Speakers/MamtaChanderChandani.jpg" },
+	{ name: "Mamta Singh", img: "/Speakers/MamtaSingh.jpg" },
+	{ name: "Meenakshi Saroha", img: "/Speakers/MeenakshiSaroha.jpg" },
+	{ name: "Minshu Garg", img: "/Speakers/MinshuGarg.jpg" },
+	{ name: "Praveen K Shukla", img: "/Speakers/PraveenKShukla.jpg" },
+	{ name: "Prof. Dr. Parin Somani", img: "/Speakers/Prof.Dr.ParinSomani.jpg" },
+	{ name: "Sahil Makkar", img: "/Speakers/SahilMakkar.jpg" },
+	{ name: "Sarita Tripathy", img: "/Speakers/SaritaTripathy.jpg" },
+	{ name: "Sayesha Khurana", img: "/Speakers/SayeshaKhurana.jpg" },
+	{ name: "Sonal Agarwal Rawat", img: "/Speakers/SonalAgarwalRawat.jpg" },
+	{ name: "Soumya Dhani", img: "/Speakers/SoumyaDhani.jpg" },
+	{ name: "Sushmita Tripathi", img: "/Speakers/SushmitaTripathi.jpg" },
+	{ name: "Tiyana Borele", img: "/Speakers/TiyanaBorele.jpg" },
+	{ name: "Vanshika Arora", img: "/Speakers/VanshikaArora.jpg" },
+	{ name: "Vikash Gupta", img: "/Speakers/VikashGupta.jpg" }
 ];
 
 export default function Home() {
@@ -277,11 +267,7 @@ export default function Home() {
 						</h2>
 						<div className="animated-gradient-divider section-bar" />
 						<p>
-							TED is a nonprofit devoted to spreading ideas, usually in the form of
-							short, powerful talks. TED began in 1984 as a conference where
-							Technology, Entertainment and Design converged, and today covers
-							almost all topics — from science to business to global issues — in
-							more than 100 languages.
+							TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks. TED began in 1984 as a conference where Technology, Entertainment, and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Its mission is to make great ideas accessible and spark meaningful conversations. TED talks are shared freely online to reach a global audience and encourage learning and engagement.
 						</p>
 					</div>
 					<div className="tedx-section" style={{
@@ -298,10 +284,7 @@ export default function Home() {
 						</h2>
 						<div className="animated-gradient-divider section-bar" />
 						<p>
-							TEDx is a program of local, self-organized events that bring people
-							together to share a TED-like experience. At a TEDx event, TED Talks
-							video and live speakers combine to spark deep discussion and
-							connection in a small group.
+							TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection in a small group. These events are fully planned and coordinated independently under a free license granted by TED. TEDx aims to inspire innovation, foster learning, and build community around powerful ideas worth spreading.
 						</p>
 					</div>
 					<div className="tedx-section" style={{
@@ -320,7 +303,26 @@ export default function Home() {
 						<p>
 							TEDxSGNS Youth is an independently organized TED event hosted by Shanti Gyan Niketan Sr. Sec. Public School (SGNS), Dwarka. The event brings together bright young minds, thought leaders, and changemakers to share powerful stories and fresh ideas that challenge perspectives and ignite curiosity. It is a celebration of ideas worth spreading, curated with the passion and purpose that SGNS has always stood for.
 						</p>
-					</div>
+					</div>	
+
+					{/* Theme: Reimagine Diversity section */}
+					<div className="tedx-section" style={{
+						background: "#fff",
+						color: "#181818",
+						boxShadow: "0 2px 16px #e62b1e11",
+						border: "1px solid #f2f2f2",
+						marginBottom: 0,
+						borderRadius: "18px",
+						padding: "2.5rem"
+					}}>
+						<h2>
+							Theme: <span style={{ color: "#e62b1e" }}>Reimagine Diversity</span>
+						</h2>
+						<div className="animated-gradient-divider section-bar" />
+						<div className="tedx-theme" style={{ fontSize: "1.15rem", color: "#222" }}>
+							"Reimagine Diversity" dares us to look at what has been invisible: the quiet voices, the unconventional misfits, the unheard narratives — and bring them into the spotlight. It is a theme that opens up conversations about neurodiversity, intersectionality, global cultures, gender fluidity, differing abilities, and more. By doing so, we aim to foster environments where everyone has the right not just to participate, but to thrive.
+						</div>
+					</div>				
 				</section>
 
 				{/* Divider above speakers */}
