@@ -1,3 +1,5 @@
+import React from "react";
+
 const speakers = [
   { name: "Aanchal Jain", title: "title", img: "/Speakers/AanchalJain.jpg", desc: "description for speaker 1" },
   { name: "Akanksha Madan", title: "title", img: "/Speakers/AkankshaMadan.jpg", desc: "description for speaker 2" },
@@ -7,6 +9,7 @@ const speakers = [
   { name: "Dr. Kiran Swami", title: "title", img: "/Speakers/Dr.KiranSwami.jpg", desc: "description for speaker 6" },
   { name: "Dr. Mala Dasgupta Sengupta", title: "title", img: "/Speakers/Dr.MalaDasguptaSengupta.jpg", desc: "description for speaker 7" },
   { name: "Dr. Samiksha Borele", title: "title", img: "/Speakers/Dr.SamikshaBorele.jpg", desc: "description for speaker 8" },
+  { name: "Dr. Shankar Goenka", title: "title", img: "/Speakers/Dr.ShankarGoenka.jpg", desc: "description for speaker 27" },
   { name: "Dr. Varsha Jain", title: "title", img: "/Speakers/Dr.VarshaJain.jpg", desc: "description for speaker 9" },
   { name: "Mahira Juneja", title: "title", img: "/Speakers/MahiraJuneja.jpg", desc: "description for speaker 10" },
   { name: "Maithreye Murali", title: "title", img: "/Speakers/MaithreyeMurali.jpg", desc: "description for speaker 11" },
@@ -25,90 +28,94 @@ const speakers = [
   { name: "Tiyana Borele", title: "title", img: "/Speakers/TiyanaBorele.jpg", desc: "description for speaker 24" },
   { name: "Vanshika Arora", title: "title", img: "/Speakers/VanshikaArora.jpg", desc: "description for speaker 25" },
   { name: "Vikash Gupta", title: "title", img: "/Speakers/VikashGupta.jpg", desc: "description for speaker 26" }
+  
 ];
 
 export default function Speakers() {
   return (
     <div className="page speakers">
-      <h1>Our Eminent Speakers</h1>
+      <h1 style={{ color: "#e62b1e" }}>Our Eminent Speakers</h1>
       <div className="animated-gradient-divider section-bar" />
-      <div
-        className="speakers-list"
-        style={{
-          display: 'flex',
-          gap: '2rem',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          background: '#181818',
-          borderRadius: '18px',
-          padding: '2.5rem 1.5rem',
-          marginBottom: '2rem'
-        }}
-      >
-        {speakers.map((sp, i) => (
-          <div
-            key={i}
-            className="speaker-card"
-            style={{
-              background: '#111',
-              color: '#fff',
-              borderRadius: '18px',
-              boxShadow: '0 8px 32px #000b',
-              border: '1.5px solid #232323',
-              padding: 0,
-              width: '320px',
-              height: 'auto', // allow height to grow for info
-              textAlign: 'left',
-              position: 'relative',
-              overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'stretch'
-            }}
-          >
-            <div style={{
-              width: '100%',
-              height: '320px',
-              aspectRatio: '1 / 1',
-              borderRadius: '18px 18px 0 0',
-              overflow: 'hidden',
-              background: '#222',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <img
-                src={sp.img}
-                alt={sp.name}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '18px 18px 0 0',
-                  background: '#222'
-                }}
-              />
-            </div>
-            <div style={{
-              width: '100%',
-              background: 'rgba(24,24,24,0.92)',
-              padding: '1.2rem 1.2rem 1.2rem 1.2rem',
-              boxSizing: 'border-box',
-              borderRadius: '0 0 18px 18px',
-              minHeight: '120px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0.5rem'
-            }}>
-              <div style={{ fontSize: '1.25rem', color: '#e62b1e', fontWeight: 700, marginBottom: '0.3rem', lineHeight: 1.3 }}>
-                {sp.desc}
+      <section style={{ margin: "2.5rem 0 0 0", width: "100%" }}>
+        <div
+          className="speakers-grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "2rem",
+            padding: "2rem 0 2rem 0",
+            margin: "0 auto",
+            maxWidth: "1200px",
+            width: "100%"
+          }}
+        >
+          {speakers.map((sp, i) => (
+            <div
+              key={i}
+              className="speaker-card"
+              style={{
+                background: '#111',
+                color: '#fff',
+                borderRadius: '18px',
+                boxShadow: '0 8px 32px #000b',
+                border: '1.5px solid #232323',
+                padding: 0,
+                width: '100%',
+                minWidth: '0',
+                maxWidth: '100%',
+                height: 'auto',
+                textAlign: 'left',
+                position: 'relative',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'stretch'
+              }}
+            >
+              <div style={{
+                width: '100%',
+                height: '320px',
+                aspectRatio: '1 / 1',
+                borderRadius: '18px 18px 0 0',
+                overflow: 'hidden',
+                background: '#222',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                <img
+                  src={sp.img}
+                  alt={sp.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '18px 18px 0 0',
+                    background: '#222'
+                  }}
+                />
               </div>
-              <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>{sp.name}</div>
-              <div style={{ color: '#e62b1e', fontWeight: 500, fontSize: '1rem' }}>{sp.title}</div>
+              <div style={{
+                width: '100%',
+                background: 'rgba(24,24,24,0.92)',
+                padding: '1.2rem 1.2rem 1.2rem 1.2rem',
+                boxSizing: 'border-box',
+                borderRadius: '0 0 18px 18px',
+                minHeight: '120px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.5rem'
+              }}>
+                <div style={{ fontSize: '1.25rem', color: '#e62b1e', fontWeight: 700, marginBottom: '0.3rem', lineHeight: 1.3 }}>
+                  {sp.desc}
+                </div>
+                <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem' }}>{sp.name}</div>
+                <div style={{ color: '#e62b1e', fontWeight: 500, fontSize: '1rem' }}>{sp.title}</div>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

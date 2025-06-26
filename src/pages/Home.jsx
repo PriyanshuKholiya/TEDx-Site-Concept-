@@ -367,7 +367,13 @@ export default function Home() {
 					<div className="carousel-container" style={{ background: "transparent", margin: 0 }}>
 						<div className="carousel-track">
 							{[...speakers, ...speakers].map((sp, i) => (
-								<div className="carousel-card" key={i}>
+								<div
+									className="carousel-card"
+									key={i}
+									tabIndex={0}
+									onClick={() => window.location.href = `/speakers`}
+									style={{ cursor: "pointer" }}
+								>
 									<img src={sp.img} alt={sp.name} />
 									<div className="carousel-overlay">
 										<span>{sp.name}</span>

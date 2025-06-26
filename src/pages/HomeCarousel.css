@@ -8,19 +8,14 @@
   display: flex;
   justify-content: center;
 }
-
 .carousel-track {
   display: flex;
   gap: 2.5rem;
-  animation: scroll-left 90s linear infinite; /* slow down the bar speed */
-  will-change: transform;
+  animation: scroll-left 150s linear infinite;
 }
-
-@keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.carousel-track:hover {
+  animation-play-state: paused !important;
 }
-
 .carousel-card {
   position: relative;
   width: 300px;
@@ -36,7 +31,8 @@
   align-items: center;
   justify-content: center;
 }
-.carousel-card:hover {
+.carousel-card:hover,
+.carousel-card:focus {
   transform: scale(1.04);
   z-index: 2;
 }
@@ -45,15 +41,18 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  /* Remove this line to allow grayscale on hover */
+  /* filter: none !important; */
   transition: filter 0.2s;
 }
-.carousel-card:hover img {
-  filter: brightness(0.7);
+.carousel-card:hover img,
+.carousel-card:focus img {
+  filter: grayscale(1) brightness(0.7) !important;
 }
 .carousel-overlay {
   position: absolute;
   left: 0; right: 0; bottom: 0; top: 0;
-  background: linear-gradient(0deg, rgba(230,43,30,0.85) 60%, rgba(0,0,0,0) 100%);
+  background: none !important;
   opacity: 0;
   display: flex;
   align-items: flex-end;
@@ -62,7 +61,8 @@
   pointer-events: none;
   padding-bottom: 2.5rem;
 }
-.carousel-card:hover .carousel-overlay {
+.carousel-card:hover .carousel-overlay,
+.carousel-card:focus .carousel-overlay {
   opacity: 1;
   pointer-events: auto;
 }
@@ -72,6 +72,14 @@
   font-weight: bold;
   text-shadow: 0 2px 8px #000a;
   letter-spacing: 1px;
+  transition: color 0.2s;
+  /* Move the name further down */
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.carousel-card:hover .carousel-overlay span,
+.carousel-card:focus .carousel-overlay span {
+  color: #fff;
 }
 
 .tedx-sections {
@@ -640,3 +648,35 @@ img.home-bg-img {
   color: #181818;
   letter-spacing: 1px;
 }
+.hero-counter-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #e62b1e;
+  margin-bottom: 0.2rem;
+}
+.hero-counter-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #181818;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Explore speakers bar scrollbar styles */
+.explore-speakers-bar {
+  scrollbar-width: thin;
+  scrollbar-color: #e62b1e #222;
+}
+.explore-speakers-bar::-webkit-scrollbar {
+  height: 10px;
+  background: #222;
+}
+.explore-speakers-bar::-webkit-scrollbar-thumb {
+  background: #e62b1e;
+  border-radius: 6px;
+}
+

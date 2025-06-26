@@ -7,7 +7,19 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <nav className="navbar">
-      <div className="navbar-logo">TED<span className="red">x</span>SGNS Youth</div>
+      {/* Logo image instead of text */}
+      <div className="navbar-logo" style={{ height: "2.5rem", display: "flex", alignItems: "center" }}>
+        <img
+          src="/Logo.png"
+          alt="TEDxSGNS Youth"
+          style={{
+            height: "2.5rem",
+            width: "auto",
+            display: "block",
+            objectFit: "contain"
+          }}
+        />
+      </div>
       {/* Hamburger button for mobile */}
       <button
         className={`navbar-hamburger${mobileMenuOpen ? ' open' : ''}`}
@@ -25,13 +37,24 @@ export default function Navbar() {
         <li><NavLink to="/speakers">Speakers</NavLink></li>
         <li><NavLink to="/nomination">Nomination</NavLink></li>
         <li><NavLink to="/rules">Rules</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
+        {/* <li><NavLink to="/contact">Contact</NavLink></li> */}
       </ul>
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
         <div className="navbar-mobile-overlay">
           <div className="navbar-mobile-header">
-            <div className="navbar-logo">TED<span className="red">x</span>SGNS Youth</div>
+            <div className="navbar-logo" style={{ height: "2.5rem", display: "flex", alignItems: "center" }}>
+              <img
+                src="/Logo.png"
+                alt="TEDxSGNS Youth"
+                style={{
+                  height: "2.5rem",
+                  width: "auto",
+                  display: "block",
+                  objectFit: "contain"
+                }}
+              />
+            </div>
             <button
               className="navbar-mobile-close"
               onClick={() => setMobileMenuOpen(false)}
@@ -46,7 +69,7 @@ export default function Navbar() {
             <li><NavLink to="/speakers" onClick={() => setMobileMenuOpen(false)}>Speakers</NavLink></li>
             <li><NavLink to="/nomination" onClick={() => setMobileMenuOpen(false)}>Nomination</NavLink></li>
             <li><NavLink to="/rules" onClick={() => setMobileMenuOpen(false)}>Rules</NavLink></li>
-            <li><NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink></li>
+            {/* <li><NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink></li> */}
           </ul>
         </div>
       )}
