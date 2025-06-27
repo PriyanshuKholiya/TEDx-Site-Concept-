@@ -135,17 +135,17 @@ export default function Home() {
 					}}
 				>
 					<div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
-						{/* Remove the X image and always show the stars canvas */}
-						{/* <img
+						{/* Desktop: X.png as hero background */}
+						<img
 							className="home-bg-img"
 							src="/X.png"
-							alt="SGNS Dwarka"
+							alt="TEDxSGNS Youth"
 							style={{
 								width: "100vw",
 								height: "100vh",
-								objectFit: "contain",
-								objectPosition: "70% 60%",
-								opacity: 0.18,
+								objectFit: "cover",
+								objectPosition: "center",
+								opacity: 0.15,
 								zIndex: 1,
 								position: "absolute",
 								left: 0,
@@ -153,10 +153,10 @@ export default function Home() {
 								transition: 'object-position 0.3s, opacity 0.3s',
 								display: 'block'
 							}}
-						/> */}
+						/>
 						{/* Mobile: Stars Canvas */}
 						<canvas id="stars-bg" style={{
-							display: 'block',
+							display: 'none',
 							position: 'absolute',
 							left: 0,
 							top: 0,

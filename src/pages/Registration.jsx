@@ -1,18 +1,21 @@
 import React from 'react';
 
 export default function Nomination() {
+  // Handler for closed nominations popup
+  const handleClosed = (e) => {
+    e.preventDefault();
+    window.alert('Nominations are now closed');
+  };
+
   return (
     <div className="page nomination" style={{ textAlign: 'center', marginTop: '4rem', minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <h1>Nominate Now for TEDxSGNS Youth</h1>
+      <h1>Nominations are now closed, thank you for visiting.</h1>
       <div className="animated-gradient-divider section-bar" />
       <p style={{ maxWidth: 600, margin: '1.5rem auto', fontSize: '1.15rem' }}>
-      <br />
-        If you wish to nominate someone for TEDxSGNS Youth, please use the link below:
+        We appreciate your interest in TEDxSGNS Youth.<br />
+        Please stay tuned for future opportunities and updates.
       </p>
-      <a
-        href="https://forms.gle/BwBRU2YL4W51ocfQ7"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
         style={{
           display: 'inline-block',
           margin: '2rem 0',
@@ -22,17 +25,14 @@ export default function Nomination() {
           borderRadius: '5px',
           textDecoration: 'none',
           fontWeight: 'bold',
-          fontSize: '1.2rem'
+          fontSize: '1.2rem',
+          border: 'none',
+          cursor: 'pointer'
         }}
+        onClick={handleClosed}
       >
-        Go to Nomination Form
-      </a>
-      <p>
-        <small>
-          If the link does not open, copy and paste this URL into your browser:<br />
-          https://forms.gle/BwBRU2YL4W51ocfQ7
-        </small>
-      </p>
+        Nominations are now closed
+      </button>
     </div>
   );
 }
