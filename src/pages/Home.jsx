@@ -35,6 +35,7 @@ const speakers = [
 export default function Home() {
 	const navigate = useNavigate();
 	const heroRef = useRef(null);
+	const carouselTrackRef = useRef(null);
 	const [fixedHero, setFixedHero] = useState(false);
 
 	// Fade-in animation for hero
@@ -69,6 +70,46 @@ export default function Home() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	// Stars animation for mobile
+	useEffect(() => {
+		const canvas = document.getElementById('stars-bg');
+		if (!canvas) return;
+		const ctx = canvas.getContext('2d');
+		const w = window.innerWidth, h = window.innerHeight;
+		canvas.width = w;
+		canvas.height = h;
+		// 3D tunnel starfield effect, even more stars for desktop
+		const numStars = w > 700 ? 650 : 60;
+		const stars = Array.from({length: numStars}, () => ({
+			x: (Math.random() - 0.5) * w,
+			y: (Math.random() - 0.5) * h,
+			z: Math.random() * w
+		}));
+		function draw() {
+			ctx.fillStyle = '#000';
+			ctx.fillRect(0, 0, w, h);
+			for (const s of stars) {
+				s.z -= 0.7; // slow for relaxing vibe
+				if (s.z < 1) {
+					s.x = (Math.random() - 0.5) * w;
+					s.y = (Math.random() - 0.5) * h;
+					s.z = w;
+				}
+				const sx = w / 2 + (s.x / s.z) * w * 0.5;
+				const sy = h / 2 + (s.y / s.z) * h * 0.5;
+				const r = Math.max(0.5, 2.5 - s.z / w * 2);
+				ctx.beginPath();
+				ctx.arc(sx, sy, r, 0, 2 * Math.PI);
+				ctx.fillStyle = `rgba(255,255,255,${0.7 - s.z / w * 0.6})`;
+				ctx.shadowColor = 'rgba(255, 255, 255, 0.5)';
+				ctx.shadowBlur = 6;
+				ctx.fill();
+			}
+			requestAnimationFrame(draw);
+		}
+		draw();
+	}, []);
+
 	const handleTellMeMore = () => {
 		const section = document.getElementById("theme-section");
 		if (section) section.scrollIntoView({ behavior: "smooth" });
@@ -81,8 +122,6 @@ export default function Home() {
 					className={`home-hero-bg${fixedHero ? " home-hero-fixed" : ""}`}
 					ref={heroRef}
 					style={{
-						minHeight: "92vh",
-						height: "92vh",
 						maxHeight: "none",
 						position: fixedHero ? "fixed" : "relative",
 						top: fixedHero ? 0 : undefined,
@@ -91,144 +130,166 @@ export default function Home() {
 						zIndex: fixedHero ? 20 : undefined,
 						transition: "box-shadow 0.3s",
 						boxShadow: fixedHero ? "0 8px 32px #0003" : undefined,
-						overflow: "hidden"
+						overflow: "hidden",
+						background: '#000'
 					}}
 				>
-					<img
-						className="home-bg-img"
-						src="R.jpeg"
-						alt="SGNS Dwarka"
-						style={{
-							width: "100vw",
-							height: "100vh",
-							objectFit: "cover",
-							objectPosition: "center 30%", // Move image up a bit for better focus
-							filter: "none",
-							WebkitFilter: "none",
-							zIndex: 1,
-							position: "absolute",
-							left: 0,
-							top: 0
-						}}
-					/>
-					{/* Light overlay for readability */}
-					<div style={{
-						position: "absolute",
-						left: 0, top: 0, width: "100%", height: "100%",
-						background: "linear-gradient(120deg, rgba(230,43,30,0.04) 0%, rgba(255,255,255,0.10) 100%)",
-						zIndex: 2,
-						pointerEvents: "none"
-					}} />
-					<div className="home-hero-glass" style={{
-						background: "transparent",
-						backdropFilter: "none",
-						zIndex: 3
-					}}>
-						<div
-							className="home-hero-content"
+					<div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+						{/* Remove the X image and always show the stars canvas */}
+						{/* <img
+							className="home-bg-img"
+							src="/X.png"
+							alt="SGNS Dwarka"
 							style={{
-								width: "100%",
-								display: "flex",
-								alignItems: "center",
-								justifyContent: "space-between",
-								gap: "2.5rem",
-								maxWidth: "1200px",
-								margin: "0 auto"
+								width: "100vw",
+								height: "100vh",
+								objectFit: "contain",
+								objectPosition: "70% 60%",
+								opacity: 0.18,
+								zIndex: 1,
+								position: "absolute",
+								left: 0,
+								top: 0,
+								transition: 'object-position 0.3s, opacity 0.3s',
+								display: 'block'
 							}}
-						>
-							<div className="home-hero-left" style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-								<h1
-									className="home-hero-title"
-								>
-									<span style={{ color: "#fff" }}>Reimagine Diversity</span>
-								</h1>
-								<div className="home-hero-subtitle" style={{ color: '#e62b1e' }}>
-									Where every difference is a new perspective.
-								</div>
-								<div className="home-hero-btns" style={{ gap: "1.5rem", display: "flex", flexWrap: "wrap" }}>
-									<button
-										className="home-red-btn modern-btn"
-										style={{
-											background: "linear-gradient(90deg, #eb0028 60%, #ff5e3a 100%)",
-											color: "#fff",
-											border: "none",
-											fontWeight: 700,
-											fontSize: "1.25rem",
-											padding: "1.15rem 2.8rem",
-											borderRadius: "2.2rem",
-											minWidth: "180px"
-										}}
-										onClick={() => navigate("/about")}
-									>
-										About Us
-									</button>
-								</div>
-							</div>
-							{/* Centered Nomination Box, now right-aligned */}
+						/> */}
+						{/* Mobile: Stars Canvas */}
+						<canvas id="stars-bg" style={{
+							display: 'block',
+							position: 'absolute',
+							left: 0,
+							top: 0,
+							width: '100vw',
+							height: '100vh',
+							zIndex: 1,
+							pointerEvents: 'none',
+						}} />
+						<style>{`
+							@media (max-width: 700px) {
+								.home-bg-img { display: none !important; }
+								#stars-bg { display: block !important; }
+							}
+						`}</style>
+						{/* Light overlay for readability */}
+						<div style={{
+							position: "absolute",
+							left: 0, top: 0, width: "100%", height: "100%",
+							background: "linear-gradient(120deg, rgba(230,43,30,0.04) 0%, rgba(255,255,255,0.10) 100%)",
+							zIndex: 2,
+							pointerEvents: "none"
+						}} />
+						<div className="home-hero-glass" style={{
+							background: "transparent",
+							backdropFilter: "none",
+							zIndex: 3
+						}}>
 							<div
-								className="white-card"
+								className="home-hero-content"
 								style={{
-									background: "#fff",
-									borderRadius: "20px",
-									boxShadow: "0 6px 32px #e62b1e22",
-									padding: "2.5rem 2.5rem 2rem 2.5rem",
-									maxWidth: 400,
 									width: "100%",
-									border: "1.5px solid #e62b1e22",
 									display: "flex",
-									flexDirection: "column",
 									alignItems: "center",
-									justifyContent: "center",
-									margin: "1.2rem 0 0 3vw"
+									justifyContent: "space-between",
+									gap: "2.5rem",
+									maxWidth: "1200px",
+									margin: "0 auto"
 								}}
 							>
-								<div style={{ fontWeight: 700, fontSize: "1.13rem", color: "#e62b1e", marginBottom: "0.5rem", letterSpacing: "1px" }}>
-									TED<span style={{color:'#e62b1e'}}>x</span>SGNS Youth
+								<div className="home-hero-left" style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+									<h1
+										className="home-hero-title"
+									>
+										<span style={{ color: "#fff" }}>Reimagine Diversity</span>
+									</h1>
+									<div className="home-hero-subtitle" style={{ color: '#e62b1e' }}>
+										Where every difference is a new perspective.
+									</div>
+									<div className="home-hero-btns" style={{ gap: "1.5rem", display: "flex", flexWrap: "wrap" }}>
+										<button
+											className="home-red-btn modern-btn"
+											style={{
+												background: "linear-gradient(90deg, #eb0028 60%, #ff5e3a 100%)",
+												color: "#fff",
+												border: "none",
+												fontWeight: 700,
+												fontSize: "1.25rem",
+												padding: "1.15rem 2.8rem",
+												borderRadius: "2.2rem",
+												minWidth: "180px"
+											}}
+											onClick={() => navigate("/about")}
+										>
+											About Us
+										</button>
+									</div>
 								</div>
-								<div style={{ fontSize: "1.55rem", fontWeight: 900, color: "#181818", marginBottom: "0.5rem", textAlign: "center", fontFamily: "'Montserrat', 'Arial', sans-serif" }}>
-									Reimagine Diversity
-								</div>
-								<div style={{ fontSize: "1.08rem", color: "#444", marginBottom: "1.2rem", textAlign: "center" }}>
-									<span style={{ fontWeight: 600 }}>Date:</span> 28 June 2025<br />
-									<span style={{ fontWeight: 600 }}>Location:</span> New Delhi, India
-								</div>
-								<div style={{ fontSize: "1.01rem", color: "#888", marginBottom: "1.3rem", textAlign: "center" }}>
-									Join us for a day of inspiring talks, new perspectives, and a celebration of diversity!
-								</div>
-								<a
-									href="#"
+								{/* Centered Nomination Box, now right-aligned */}
+								<div
+									className="white-card"
 									style={{
-										display: "inline-block",
-										background: "#e62b1e",
-										color: "#fff",
-										borderRadius: "6px",
-										padding: "0.85rem 2.1rem",
-										fontWeight: 700,
-										fontSize: "1.13rem",
-										textDecoration: "none",
-										letterSpacing: ".5px",
-										boxShadow: "0 2px 8px #e62b1e22",
-										transition: "background 0.18s, transform 0.18s, box-shadow 0.18s",
-										cursor: "pointer"
+										background: "#fff",
+										borderRadius: "20px",
+										boxShadow: "0 6px 32px #e62b1e22",
+										padding: "2.1rem 1.1rem 1.5rem 1.1rem",
+										maxWidth: 400,
+										width: "100%",
+										border: "1.5px solid #e62b1e22",
+										display: "flex",
+										flexDirection: "column",
+										alignItems: "center",
+										justifyContent: "center",
+										margin: "0.7rem 0 0.7rem 0"
 									}}
-									onMouseOver={e => {
-										e.currentTarget.style.background = "#fff";
-										e.currentTarget.style.color = "#e62b1e";
-										e.currentTarget.style.transform = "translateY(-2px) scale(1.04)";
-										e.currentTarget.style.boxShadow = "0 4px 16px #e62b1e33";
-										e.currentTarget.style.border = "2px solid #e62b1e";
-									}}
-									onMouseOut={e => {
-										e.currentTarget.style.background = "#e62b1e";
-										e.currentTarget.style.color = "#fff";
-										e.currentTarget.style.transform = "none";
-										e.currentTarget.style.boxShadow = "0 2px 8px #e62b1e22";
-										e.currentTarget.style.border = "none";
-									}}
-									onClick={e => { e.preventDefault(); navigate("/nomination"); }}
 								>
-									Nominate Yourself
-								</a>
+									<div style={{ fontWeight: 700, fontSize: "1.13rem", color: "#e62b1e", marginBottom: "0.5rem", letterSpacing: "1px" }}>
+										TED<span style={{color:'#e62b1e'}}>x</span>SGNS Youth
+									</div>
+									<div style={{ fontSize: "1.55rem", fontWeight: 900, color: "#181818", marginBottom: "0.5rem", textAlign: "center", fontFamily: "'Montserrat', 'Arial', sans-serif" }}>
+										Reimagine Diversity
+									</div>
+									<div style={{ fontSize: "1.08rem", color: "#444", marginBottom: "1.2rem", textAlign: "center" }}>
+										<span style={{ fontWeight: 600 }}>Date:</span> 28 June 2025<br />
+										<span style={{ fontWeight: 600 }}>Location:</span> New Delhi, India
+									</div>
+									<div style={{ fontSize: "1.01rem", color: "#888", marginBottom: "1.3rem", textAlign: "center" }}>
+										Join us for a day of inspiring talks, new perspectives, and a celebration of diversity!
+									</div>
+									<a
+										href="#"
+										style={{
+											display: "inline-block",
+											background: "#e62b1e",
+											color: "#fff",
+											borderRadius: "6px",
+											padding: "0.85rem 2.1rem",
+											fontWeight: 700,
+											fontSize: "1.13rem",
+											textDecoration: "none",
+											letterSpacing: ".5px",
+											boxShadow: "0 2px 8px #e62b1e22",
+											transition: "background 0.18s, transform 0.18s, box-shadow 0.18s",
+											cursor: "pointer"
+										}}
+										onMouseOver={e => {
+											e.currentTarget.style.background = "#fff";
+											e.currentTarget.style.color = "#e62b1e";
+											e.currentTarget.style.transform = "translateY(-2px) scale(1.04)";
+											e.currentTarget.style.boxShadow = "0 4px 16px #e62b1e33";
+											e.currentTarget.style.border = "2px solid #e62b1e";
+										}}
+										onMouseOut={e => {
+											e.currentTarget.style.background = "#e62b1e";
+											e.currentTarget.style.color = "#fff";
+											e.currentTarget.style.transform = "none";
+											e.currentTarget.style.boxShadow = "0 2px 8px #e62b1e22";
+											e.currentTarget.style.border = "none";
+										}}
+										onClick={e => { e.preventDefault(); navigate("/nomination"); }}
+									>
+										Nominate Yourself
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -366,7 +427,7 @@ export default function Home() {
 					</div>
 					<div className="carousel-container" style={{ background: "transparent", margin: 0 }}>
 						<div className="carousel-track">
-							{[...speakers, ...speakers].map((sp, i) => (
+							{speakers.map((sp, i) => (
 								<div
 									className="carousel-card"
 									key={i}
@@ -433,6 +494,38 @@ export default function Home() {
       border: none !important;
       visibility: visible !important;
       opacity: 1 !important;
+    }
+  }
+  @media (max-width: 700px) {
+    .home-hero-content {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 1.5rem !important;
+    }
+    .white-card {
+      margin: 0.7rem auto 0.7rem auto !important;
+      padding: 1.1rem 0.7rem 1.1rem 0.7rem !important;
+    }
+    .home-hero-bg {
+      min-height: unset !important;
+      height: auto !important;
+      margin-bottom: 0.15rem !important;
+      padding-bottom: 0.2rem !important;
+    }
+    .navbar {
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+  @media (max-width: 500px) {
+    .white-card {
+      margin: 0.5rem auto 0.5rem auto !important;
+      padding: 0.7rem 0.3rem 0.9rem 0.3rem !important;
+    }
+    .home-hero-bg {
+      min-height: unset !important;
+      margin-bottom: 0.08rem !important;
+      padding-bottom: 0.12rem !important;
     }
   }
 `}</style>

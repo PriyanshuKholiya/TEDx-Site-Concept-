@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./TEDxSGNS Youth_files/client"></script>
+
+    
+    <link rel="icon" href="http://localhost:5173/favicon.ico">
+    <link rel="icon" href="./TEDxSGNS Youth_files/X.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDxSGNS Youth</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/Preeti/OneDrive/Desktop/TEDxUPES/src/App.css">/* ...existing code... */
+
+.home-hero-title .highlight {
+  color: #ff2b06 !important; /* Brighter, more visible red for 'Diversity' */
+  opacity: 1 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.home-hero-subtitle {
+  color: #222 !important; /* Much darker for subtitle */
+  opacity: 0.95 !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+@media (max-width: 600px) {
+  html, body, #root, .page, .container, .section, .hero-section, .hero-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+  .white-card, .event-card, .nominate-section, .info-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0 0 18px 18px !important;
+    overflow-x: hidden !important;
+  }
+  .page, .container, .section, .hero-section, .hero-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+  .animated-gradient-divider,
+  .upes-gradient-bar,
+  .slim-animated-divider,
+  .section-bar {
+    max-width: 90vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 3px !important;
+  }
+  .speakers-list {
+    overflow-x: visible !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.2rem !important;
+    padding: 1.1rem 0.2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .speaker-card {
+    min-width: 90vw !important;
+    max-width: 95vw !important;
+    width: 95vw !important;
+    padding: 0.8rem 0.2rem 0.8rem 0.2rem !important;
+    overflow-x: hidden !important;
+  }
+  .speaker-card img {
+    width: 60px !important;
+    height: 60px !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+  .carousel-container {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+  .carousel-card {
+    width: 96vw !important;
+    max-width: 98vw !important;
+    min-width: 0 !important;
+    height: 120px !important;
+    overflow-x: hidden !important;
+  }
+  .carousel-track {
+    gap: 0.5rem !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+  .carousel-overlay span {
+    font-size: 1.1rem !important;
+  }
+  .home-hero-content {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 0 4vw !important;
+  }
+  .home-hero-title {
+    font-size: 1.45rem !important;
+    margin-bottom: 0.8rem !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    line-height: 1.15 !important;
+  }
+  .home-hero-title, .home-hero-title span {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    color: #fff !important;
+    text-align: left !important;
+    display: block !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .home-hero-subtitle {
+    color: #e62b1e !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.2rem !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    display: block !important;
+    background: none !important;
+    background-clip: unset !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+  }
+  .white-card {
+    margin-top: 0.7rem !important;
+  }
+  .home-hero-btns, .hero-buttons {
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+    align-items: stretch !important;
+  }
+  .modern-btn, .home-red-btn, .nominate-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    font-size: 1rem !important;
+    padding: 0.8rem 0.5rem !important;
+    border-radius: 2rem !important;
+    font-weight: bold !important;
+    border: none !important;
+    background: linear-gradient(90deg, #e62b1e, #ff7e5f) !important;
+    color: #fff !important;
+    display: block !important;
+    margin: 0.5rem 0 !important;
+    opacity: 1 !important;
+  }
+  .tedx-section {
+    padding: 1.1rem 0.5rem 1.3rem 0.5rem !important;
+    border-radius: 10px !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.7rem !important;
+    margin-top: 0.7rem !important;
+    box-shadow: 0 2px 10px #e62b1e11 !important;
+  }
+  .tedx-section h2 {
+    font-size: 1.15rem !important;
+    margin-bottom: 0.7rem !important;
+    margin-top: 0.2rem !important;
+    line-height: 1.2 !important;
+  }
+  .tedx-theme {
+    font-size: 1rem !important;
+    margin-top: 0.7rem !important;
+  }
+  .hero-counter-section {
+    margin: 1.2rem 0 0 0 !important;
+    width: 100vw !important;
+    padding: 0 !important;
+  }
+  .hero-counter-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .hero-counter {
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .hero-counter-box {
+    min-width: 60px !important;
+    padding: 0.7rem 0.2rem !important;
+    font-size: 1rem !important;
+  }
+  .hero-counter-number {
+    font-size: 1.3rem !important;
+  }
+  .hero-counter-label {
+    font-size: 0.9rem !important;
+  }
+  .hero-section, .hero-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .hero-image {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0 !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    display: block !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: none !important;
+  }
+  .event-card, .nominate-section, .white-card, .info-card {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 0 0 18px 18px !important;
+    overflow-x: hidden !important;
+  }
+  body, html, #root {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    background: #181818 !important;
+  }
+  body, html, #root, .page, .container, .section {
+    font-family: 'system-ui', 'Arial', 'Roboto', sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+  }
+  .about-section, .about-section * {
+    font-family: 'system-ui', 'Arial', 'Roboto', sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+  }
+  .hero-title, .hero-title span {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    color: #fff !important;
+    display: block;
+    text-align: left;
+  }
+  .hero-tagline {
+    color: #fff !important;
+    transition: color 0.2s;
+  }
+  @media (max-width: 600px) {
+    .hero-tagline {
+      color: #e62b1e !important;
+    }
+  }
+  .white-card, .event-card, .nominate-section, .info-card {
+    margin-top: 1.2rem !important;
+    margin-bottom: 0 !important;
+    width: 95vw !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+  }
+}
+@media (max-width: 400px) {
+  .home-hero-title {
+    font-size: 1.1rem !important;
+  }
+  .modern-btn, .home-red-btn, .nominate-btn {
+    font-size: 0.85rem !important;
+    padding: 0.6rem 0.3rem !important;
+  }
+  .tedx-section h2 {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ...existing code... */</style><style type="text/css" data-vite-dev-id="C:/Users/Preeti/OneDrive/Desktop/TEDxUPES/src/pages/HomeCarousel.css">.carousel-container {
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+  margin: 0 auto 2rem auto;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.carousel-track {
+  display: flex;
+  gap: 2.5rem;
+  animation: scroll-left 45s linear infinite;
+}
+.carousel-track:hover {
+  animation-play-state: paused !important;
+}
+.carousel-card {
+  position: relative;
+  width: 300px;
+  height: 340px;
+  flex: 0 0 auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 16px #0005;
+  background: #181818;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-card:hover,
+.carousel-card:focus {
+  transform: scale(1.04);
+  z-index: 2;
+}
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Remove this line to allow grayscale on hover */
+  /* filter: none !important; */
+  transition: filter 0.2s;
+}
+.carousel-card:hover img,
+.carousel-card:focus img {
+  filter: grayscale(1) brightness(0.7) !important;
+}
+.carousel-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0; top: 0;
+  background: none !important;
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  padding-bottom: 2.5rem;
+}
+.carousel-card:hover .carousel-overlay,
+.carousel-card:focus .carousel-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.carousel-overlay span {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px #000a;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  /* Move the name further down */
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.carousel-card:hover .carousel-overlay span,
+.carousel-card:focus .carousel-overlay span {
+  color: #fff;
+}
+
+.tedx-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 2.5rem auto 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+.tedx-section {
+  background: #181818;
+  border-radius: 10px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 16px #0003;
+  width: 100%;
+  text-align: center;
+}
+.tedx-section h2 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 2rem;
+}
+.tedx-theme {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.home-hero-bg {
+  position: relative;
+  width: 100%;
+  /* min-height: 92vh; */
+  /* height: 92vh; */
+  max-height: none;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: #000;
+}
+.home-bg-img {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  /* Remove ALL filters for a clear image */
+  filter: none !important;
+  -webkit-filter: none !important;
+  /* Remove any previous filter property by increasing specificity */
+  z-index: 1;
+}
+img.home-bg-img {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+.home-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.home-hero-left {
+  margin-left: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.home-hero-title {
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2.5px;
+  text-shadow: 0 4px 24px #000b, 0 2px 8px #e62b1e99, 0 1px 0 #fff2;
+  text-align: left;
+  line-height: 1.1;
+}
+.home-hero-title .highlight {
+  color: #fff !important;
+  font-size: 3.2rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 2.5px;
+  line-height: 1.1;
+  text-shadow: 0 4px 24px #000b, 0 2px 8px #e62b1e99, 0 1px 0 #fff2;
+}
+.home-hero-subtitle {
+  color: #fff !important;
+  font-size: 1.45rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  opacity: 1 !important;
+  text-shadow: 0 2px 12px #fff4, 0 1px 0 #0002;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 900px) {
+  .home-hero-subtitle {
+    color: #e62b1e !important;
+  }
+  .white-card {
+    margin-top: 0.5rem !important;
+  }
+  .home-hero-bg {
+    /* min-height: unset !important; */
+    /* height: unset !important; */
+    max-height: none !important;
+  }
+}
+.home-hero-btns {
+  display: flex;
+  gap: 1.5rem;
+}
+.home-red-btn {
+  background: #e62b1e;
+  color: #fff;
+  border: none;
+  padding: 1rem 2.2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px #0004;
+  letter-spacing: 1px;
+}
+.home-red-btn:hover {
+  background: #b71c13;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 1.2rem;
+  right: 2rem;
+  z-index: 100;
+  background: rgba(30,30,30,0.7);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #0003;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-toggle-btn:hover {
+  background: #e62b1e;
+  color: #fff;
+}
+
+.home-hero-glass {
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(24,24,24,0.10);
+  backdrop-filter: blur(2.5px) saturate(1.1);
+  z-index: 2;
+}
+
+.modern-btn {
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, #eb0028 60%, #ff5e3a 100%) !important;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 16px #eb002833;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  outline: none;
+}
+.modern-btn:hover {
+  background: linear-gradient(90deg, #ff5e3a 0%, #eb0028 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 24px #eb002855;
+}
+
+.modern-home.light-theme {
+  background: #f8f8f8;
+  color: #181818;
+}
+.modern-home.light-theme .home-hero-glass {
+  background: rgba(255,255,255,0.55);
+  color: #181818;
+}
+.modern-home.light-theme .home-hero-title {
+  color: #181818;
+  text-shadow: none;
+}
+.modern-home.light-theme .modern-btn {
+  background: linear-gradient(90deg, #e62b1e 60%, #ff5e3a 100%);
+  color: #fff;
+}
+.modern-home.light-theme .modern-btn:hover {
+  background: linear-gradient(90deg, #ff5e3a 0%, #e62b1e 100%);
+}
+.modern-home.light-theme .carousel-card {
+  background: #fff;
+  color: #181818;
+}
+.modern-home.light-theme .carousel-card img {
+  filter: none;
+}
+.modern-home.light-theme .carousel-overlay {
+  background: linear-gradient(0deg, rgba(230,43,30,0.85) 60%, rgba(255,255,255,0) 100%);
+}
+
+.modern-home.dark-theme {
+  background: #111;
+  color: #fff;
+}
+
+.upes-gradient-bar {
+  width: 100%;
+  max-width: 700px;
+  height: 8px; /* was 4px */
+  margin: 0.5rem auto 1.5rem auto;
+  border-radius: 4px; /* was 2px */
+  background: linear-gradient(90deg, #f9b233 0%, #e62b1e 35%, #e94e77 60%, #3a8dde 100%);
+  box-shadow: 0 1px 8px #0002;
+}
+
+.animated-gradient-divider {
+  width: 100%;
+  max-width: 700px;
+  height: 8px; /* was 4px */
+  margin: 0.5rem auto 1.5rem auto;
+  border-radius: 4px; /* was 2px */
+  background: linear-gradient(90deg, #f9b233 0%, #e62b1e 35%, #e94e77 60%, #3a8dde 100%);
+  box-shadow: 0 1px 8px #0002;
+  position: relative;
+  overflow: hidden;
+}
+.animated-gradient-divider::before {
+  content: '';
+  position: absolute;
+  left: -30%;
+  top: 0; bottom: 0;
+  width: 30%;
+  background: linear-gradient(90deg, #fff8 0%, #e62b1e88 100%);
+  opacity: 0.5;
+  border-radius: 4px; /* was 2px */
+  animation: divider-move 2.2s linear infinite;
+}
+@keyframes divider-move {
+  0% { left: -30%; }
+  100% { left: 100%; }
+}
+
+.section-bar {
+  margin-top: -1.2rem;
+  margin-bottom: 1.2rem;
+  height: 6px; /* was 3px */
+  max-width: 180px;
+}
+
+.slim-animated-divider {
+  height: 3px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0.5rem auto 1.5rem auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #fff 0%, #e62b1e 50%, #fff 100%);
+  position: relative;
+  overflow: hidden;
+}
+.slim-animated-divider::before {
+  content: '';
+  position: absolute;
+  left: -20%;
+  top: 0; bottom: 0;
+  width: 20%;
+  background: linear-gradient(90deg, #e62b1e 0%, #fff 100%);
+  opacity: 0.7;
+  border-radius: 2px;
+  animation: slim-divider-move 1.8s linear infinite;
+}
+@keyframes slim-divider-move {
+  0% { left: -20%; }
+  100% { left: 100%; }
+}
+
+/* Responsive improvement for the nominate button if used elsewhere */
+@media (hover: none) and (pointer: coarse) {
+  a[style*="Nominate Yourself"] {
+    transition: none !important;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .carousel-container {
+    max-width: 98vw;
+    padding: 0 1vw;
+  }
+  .carousel-card {
+    width: 90vw;
+    max-width: 320px;
+    height: 220px;
+  }
+  .tedx-sections {
+    max-width: 98vw;
+    padding: 0 1vw;
+  }
+  .tedx-section {
+    padding: 1.2rem 0.7rem;
+    border-radius: 10px;
+  }
+  .home-hero-content {
+    flex-direction: column;
+    gap: 1.5rem !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 0 1vw;
+  }
+  .home-hero-left {
+    margin-left: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .home-hero-title {
+    font-size: 2.1rem !important;
+    margin-bottom: 1.2rem !important;
+    text-align: left !important;
+  }
+  .home-hero-btns {
+    flex-direction: column;
+    gap: 1rem !important;
+    width: 100%;
+  }
+  .modern-btn, .home-red-btn {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
+  }
+  .carousel-track {
+    gap: 1rem;
+  }
+  .speakers-list {
+    gap: 1rem !important;
+    padding: 1.2rem 0.5rem !important;
+  }
+  .speaker-card {
+    width: 95vw !important;
+    max-width: 320px;
+    padding: 1.2rem 0.7rem 1rem 0.7rem !important;
+  }
+  .animated-gradient-divider,
+  .upes-gradient-bar,
+  .slim-animated-divider {
+    max-width: 98vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-bar {
+    max-width: 90vw;
+    height: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+  }
+  .carousel-track {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1.2rem !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    overflow-x: visible !important;
+    animation: none !important;
+  }
+  .carousel-card {
+    width: 80vw !important;
+    max-width: 80vw !important;
+    min-width: 80vw !important;
+    height: 320px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    border-radius: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    scroll-snap-align: center !important;
+  }
+  .carousel-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+    display: block !important;
+  }
+  .home-hero-bg {
+    /* min-height: unset !important; */
+    /* height: unset !important; */
+    max-height: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-hero-content {
+    flex-direction: column;
+    gap: 1.2rem !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 0 4vw;
+  }
+  .home-hero-left {
+    margin-left: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .home-hero-title {
+    font-size: 1.45rem !important;
+    margin-bottom: 0.8rem !important;
+    margin-top: 0.5rem !important;
+    text-align: left !important;
+    word-break: break-word;
+    line-height: 1.15;
+  }
+  .home-hero-btns {
+    flex-direction: column;
+    gap: 0.7rem !important;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .modern-btn, .home-red-btn {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 0.8rem 0.5rem;
+  }
+  .speakers-list {
+    gap: 0.7rem !important;
+    padding: 1.1rem 0.2rem !important;
+    flex-direction: column;
+    align-items: center;
+  }
+  .speaker-card {
+    width: 97vw !important;
+    max-width: 99vw;
+    padding: 0.8rem 0.2rem 0.8rem 0.2rem !important;
+  }
+  .speaker-card img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .tedx-sections {
+    gap: 1.5rem;
+    margin: 1.5rem auto 0 auto;
+    padding: 0 2vw;
+  }
+  .tedx-section {
+    padding: 1.1rem 0.5rem 1.3rem 0.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 0.7rem !important;
+    margin-top: 0.7rem !important;
+    box-shadow: 0 2px 10px #e62b1e11;
+  }
+  .tedx-section h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.2rem;
+    line-height: 1.2;
+  }
+  .tedx-theme {
+    font-size: 1rem;
+    margin-top: 0.7rem;
+  }
+  .animated-gradient-divider,
+  .upes-gradient-bar,
+  .slim-animated-divider {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3px;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.1rem !important;
+    position: relative;
+    z-index: 1;
+  }
+  .section-bar {
+    max-width: 80vw;
+    height: 3px;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .carousel-container {
+    max-width: 100vw;
+    padding: 0;
+  }
+  .carousel-card {
+    width: 98vw;
+    max-width: 99vw;
+    height: 120px;
+    min-width: 0;
+  }
+  .carousel-track {
+    gap: 0.5rem;
+  }
+  .carousel-overlay span {
+    font-size: 1.1rem;
+  }
+  /* Add spacing below the hero section */
+  .home-hero-bg {
+    /* min-height: unset !important; */
+    /* height: unset !important; */
+    max-height: none !important;
+  }
+}
+
+/* --- General improvements for all screens --- */
+.animated-gradient-divider,
+.slim-animated-divider {
+  margin-top: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.tedx-section h2 {
+  margin-top: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+
+@media (max-width: 350px) {
+  .home-hero-title {
+    font-size: 0.95rem !important;
+  }
+  .modern-btn, .home-red-btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.3rem;
+  }
+  .tedx-section h2 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Counter styles for light theme */
+.hero-counter-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5rem 0 0 0;
+}
+.hero-counter-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #181818;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+.hero-counter {
+  display: flex;
+  gap: 1.5rem;
+}
+.hero-counter-box {
+  background: linear-gradient(180deg, #fff 60%, #f8f8f8 100%);
+  border: 2px solid #e62b1e;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px #e62b1e11;
+  padding: 1.2rem 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 90px;
+}
+.hero-counter-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #e62b1e;
+  margin-bottom: 0.2rem;
+}
+.hero-counter-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #181818;
+  letter-spacing: 1px;
+}
+.hero-counter-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #e62b1e;
+  margin-bottom: 0.2rem;
+}
+.hero-counter-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #181818;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Explore speakers bar scrollbar styles */
+.explore-speakers-bar {
+  scrollbar-width: thin;
+  scrollbar-color: #e62b1e #222;
+}
+.explore-speakers-bar::-webkit-scrollbar {
+  height: 10px;
+  background: #222;
+}
+.explore-speakers-bar::-webkit-scrollbar-thumb {
+  background: #e62b1e;
+  border-radius: 6px;
+}
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/Preeti/OneDrive/Desktop/TEDxUPES/src/components/Footer.css">.tedx-footer {
+  background: #111;
+  color: #fff;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  padding: 0.7rem 0 0.7rem 0;
+  min-height: 48px;
+  border-top: 1px solid #222;
+}
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 96vw;
+  margin: 0 auto;
+  padding: 0 2.5vw;
+  height: 48px;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+.footer-right {
+  display: flex;
+  align-items: center;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 0.5rem;
+    padding: 0 1vw;
+  }
+  .footer-right {
+    margin-left: 0;
+    margin-top: 0.2rem;
+    font-size: 0.98rem;
+  }
+  .footer-left {
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 600px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 0.3rem;
+    padding: 0 0.5vw;
+  }
+  .footer-right,
+  .footer-left {
+    font-size: 0.85rem;
+  }
+}
+.footer-links {
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+.footer-socials {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.footer-social-icon {
+  margin-right: 0.4em;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+.footer-social-img {
+  width: 1.3em;
+  height: 1.3em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  filter: invert(0.7) grayscale(1);
+  opacity: 0.8;
+  transition: filter 0.2s, opacity 0.2s;
+}
+.footer-link:hover .footer-social-img {
+  filter: invert(36%) sepia(99%) saturate(7492%) hue-rotate(353deg) brightness(99%) contrast(110%);
+  opacity: 1;
+}
+.footer-bottom,
+.footer-bottom-no-apps {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  padding: 1rem 2rem 0 2rem;
+  font-size: 1rem;
+  gap: 2rem;
+  text-align: center; /* Center text */
+}
+.footer-bottom-no-apps {
+  justify-content: center; /* Center horizontally */
+  gap: 4rem;
+}
+.footer-socials span {
+  margin-right: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+.footer-copy {
+  text-align: right;
+  color: #ccc;
+  font-size: 1.18rem;
+  margin-top: 0;
+  margin-left: 2rem;
+}
+/* Remove newsletter and app button styles */
+.footer-newsletter,
+.footer-apps {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .tedx-footer {
+    padding: 2rem 0 1.2rem 0;
+    min-height: 80px;
+  }
+  .footer-top,
+  .footer-top-no-newsletter {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+  .footer-links {
+    gap: 1.2rem;
+    flex-direction: column;
+  }
+  .footer-logo {
+    font-size: 1.2rem;
+    min-width: 120px;
+  }
+  .footer-bottom,
+  .footer-bottom-no-apps {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0.7rem 0 0 0;
+    font-size: 0.95rem;
+  }
+  .footer-copy {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .tedx-footer {
+    padding: 1.2rem 0 0.7rem 0;
+    min-height: 60px;
+  }
+  .footer-top,
+  .footer-top-no-newsletter {
+    padding-bottom: 0.5rem;
+  }
+  .footer-logo {
+    font-size: 1rem;
+    min-width: 80px;
+  }
+  .footer-links > div {
+    min-width: 90px;
+  }
+  .footer-links {
+    gap: 0.7rem;
+  }
+  .footer-bottom,
+  .footer-bottom-no-apps {
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+  .footer-copy {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .tedx-footer {
+    padding: 0.5rem 0 0.2rem 0;
+    min-height: 50px;
+  }
+  .footer-top,
+  .footer-top-no-newsletter {
+    padding-bottom: 0.2rem;
+    gap: 0.5rem;
+  }
+  .footer-logo {
+    font-size: 0.9rem;
+    min-width: 60px;
+  }
+  .footer-links > div {
+    min-width: 60px;
+  }
+  .footer-links {
+    gap: 0.3rem;
+  }
+  .footer-bottom,
+  .footer-bottom-no-apps {
+    font-size: 0.75rem;
+    gap: 0.3rem;
+  }
+  .footer-copy {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Preeti/OneDrive/Desktop/TEDxUPES/src/components/Navbar.css">.navbar {
+  background: #000 !important;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem 0.7rem 2rem;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: none !important;
+  border-bottom: none !important;
+  min-height: 54px;
+}
+.navbar-logo {
+  font-size: 1.65rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.navbar-logo .red {
+  color: #e62b1e;
+}
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+  display: inline-block;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 8px 0;
+  display: inline-block;
+  position: relative;
+}
+.navbar a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  background: #e62b1e;
+  transition: width 0.3s;
+}
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+.navbar a.active, .navbar a:hover {
+  color: #e62b1e;
+}
+.theme-toggle-btn {
+  margin-left: 1.5rem;
+  background: rgba(30,30,30,0.7);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #0003;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggle-btn:hover {
+  background: #e62b1e;
+  color: #fff;
+}
+
+/* Hamburger menu styles */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1201;
+  margin-left: auto;
+}
+.navbar-hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.navbar-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile overlay styles */
+.navbar-mobile-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #111;
+  color: #fff;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.navbar-mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem 0.5rem 1.5rem;
+  border-bottom: 1px solid #222;
+}
+.navbar-mobile-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.navbar-links-mobile {
+  list-style: none;
+  padding: 2.5rem 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.navbar-links-mobile li {
+  width: 100%;
+  text-align: center;
+}
+.navbar-links-mobile a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 0.5rem 0;
+  display: block;
+}
+.navbar-links-mobile a:hover,
+.navbar-links-mobile a.active {
+  color: #e62b1e;
+}
+
+/* Mobile-first styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    padding: 0;
+    background: #000;
+    min-height: 60px;
+    z-index: 100;
+  }
+  .navbar-logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 1.2rem 0 1rem 0;
+    text-align: center;
+    z-index: 102;
+  }
+  .navbar .red {
+    color: #e62b1e;
+  }
+  .navbar-hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    z-index: 103;
+    cursor: pointer;
+  }
+  .navbar-hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .navbar-hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar-hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar-links-desktop {
+    display: none !important;
+  }
+  .navbar-mobile-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #fff;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    animation: fadeIn 0.2s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .navbar-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 1.2rem 0.5rem 1.2rem;
+    border-bottom: 1px solid #eee;
+  }
+  .navbar-mobile-header .navbar-logo {
+    color: #000;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar-mobile-close {
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #e62b1e;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.5rem;
+  }
+  .navbar-links-mobile {
+    list-style: none;
+    padding: 2.5rem 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+  }
+  .navbar-links-mobile li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-links-mobile a {
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+  .navbar-links-mobile a.active,
+  .navbar-links-mobile a:hover {
+    color: #e62b1e;
+  }
+  .navbar-links-mobile .registrations-closed {
+    margin-top: 2.5rem;
+    background: #e62b1e22;
+    color: #e62b1e;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: not-allowed;
+  }
+  .navbar-links-mobile a.active-menu-rect {
+    background: #e62b1e;
+    color: #fff !important;
+    border-radius: 1.2rem;
+    padding: 0.4rem 1.2rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0.2rem 0;
+    transition: background 0.18s, color 0.18s;
+    box-shadow: 0 2px 8px #e62b1e22;
+  }
+  .navbar-links-mobile a.active-menu-rect::after {
+    display: none !important;
+  }
+}
+
+/* Desktop styles (unchanged) */
+@media (min-width: 769px) {
+  .navbar-hamburger {
+    display: none;
+  }
+  .navbar-mobile-overlay {
+    display: none;
+  }
+  .navbar-links-desktop {
+    display: flex !important;
+    gap: 2.2rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-links-desktop li a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+  .navbar-links-desktop li a.active,
+  .navbar-links-desktop li a:hover {
+    color: #e62b1e;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.7rem 1rem;
+    min-height: 48px;
+  }
+  .navbar-logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .navbar ul {
+    gap: 1.2rem;
+    margin-right: 0.5rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem;
+    min-height: 40px;
+  }
+  .navbar-logo {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .navbar ul {
+    gap: 0.7rem;
+    font-size: 0.95rem;
+    margin-right: 0 !important;
+  }
+  .navbar li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.3rem 0.2rem;
+    min-height: 36px;
+  }
+  .navbar-logo {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+  .navbar ul {
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-right: 0 !important;
+  }
+  .navbar li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    background: #000 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Preeti/OneDrive/Desktop/TEDxUPES/src/index.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #181818;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.app-container,
+.app-container .page {
+  background: #f8f8f8;
+  color: #181818;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.page h1, .page h2, .page h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #181818;
+  text-align: center;
+}
+
+.page ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: unset;
+  padding-left: 2.2rem; /* ensure bullets align left and are consistent */
+}
+
+input,
+textarea {
+  background: #fff;
+  color: #181818;
+}
+
+/* Footer always dark, regardless of theme */
+
+.tedx-footer {
+  background: #111 !important;
+  color: #fff !important;
+  margin-top: auto;
+}
+
+.footer-logo,
+.footer-links h4,
+.footer-link,
+.footer-copy {
+  color: #fff !important;
+}
+
+.footer-link:hover {
+  color: #e62b1e !important;
+}
+
+.speakers-list {
+  /* Add a subtle background for the speakers section */
+  background: #f4f4f4;
+  border-radius: 18px;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.app-container.light-theme .speakers-list {
+  background: #fff;
+}
+
+.speaker-card {
+  background: #fff;
+  color: #181818;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0001;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #ececec;
+}
+
+.speaker-card:hover {
+  box-shadow: 0 6px 24px #e62b1e22;
+  transform: translateY(-4px) scale(1.03);
+}
+
+.speaker-card h3 {
+  color: #e62b1e;
+  margin-bottom: 0.5rem;
+}
+
+.speaker-card div[style*="fontWeight:'bold'"] {
+  color: #555;
+}
+
+.speaker-card div[style*="fontSize:'0.95rem'"] {
+  color: #222;
+}
+
+.app-container.light-theme .speaker-card {
+  background: #fafafa;
+  color: #181818;
+  border: 1px solid #e0e0e0;
+}
+
+.app-container.light-theme .speaker-card h3 {
+  color: #e62b1e;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+.home-hero-bg {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    padding-bottom: 1rem;
+  }
+  .page {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    min-height: 50vh;
+  }
+  .page h1, .page h2, .page h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .speakers-list {
+    padding: 1.2rem 0.5rem;
+    gap: 1rem;
+  }
+  .speaker-card {
+    width: 95vw !important;
+    max-width: 320px;
+    padding: 1.2rem 0.7rem 1rem 0.7rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding-bottom: 0.5rem;
+  }
+  .page {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    min-height: 40vh;
+  }
+  .page h1, .page h2, .page h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  .speakers-list {
+    padding: 0.7rem 0.2rem;
+    gap: 0.5rem;
+  }
+  .speaker-card {
+    width: 98vw !important;
+    max-width: 99vw;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-content {
+    padding-bottom: 0.2rem;
+  }
+  .page {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    min-height: 30vh;
+  }
+  .page h1, .page h2, .page h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    word-break: break-word;
+  }
+  .speakers-list {
+    padding: 0.5rem 0.1rem;
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .speaker-card {
+    width: 99vw !important;
+    max-width: 99vw;
+    padding: 0.5rem 0.1rem 0.5rem 0.1rem !important;
+  }
+  .speaker-card img {
+    width: 60px !important;
+    height: 60px !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+}
+</style></head>
+  <body>
+    <div id="root"><div class="app-container light-theme"><nav class="navbar"><div class="navbar-logo" style="height: 2.5rem; display: flex; align-items: center;"><img src="./TEDxSGNS Youth_files/Logo.png" alt="TEDxSGNS Youth" style="height: 2.5rem; width: auto; display: block; object-fit: contain;"></div><button class="navbar-hamburger" aria-label="Open menu"><span></span><span></span><span></span></button><ul class="navbar-links-desktop" style="margin-right: 3.5rem;"><li><a aria-current="page" class="active" href="http://localhost:5173/">Home</a></li><li><a class="" href="http://localhost:5173/about">About</a></li><li><a class="" href="http://localhost:5173/speakers">Speakers</a></li><li><a class="" href="http://localhost:5173/nomination">Nomination</a></li><li><a class="" href="http://localhost:5173/rules">Rules</a></li></ul></nav><div class="main-content"><div class="page home home-centered modern-home light-theme" style="padding: 0px; min-height: 0px;"><div class="home-hero-bg fade-in" style="max-height: none; position: relative; transition: box-shadow 0.3s; overflow: hidden; background: rgb(0, 0, 0);"><div style="position: relative; width: 100vw; height: 100vh; overflow: hidden;"><img class="home-bg-img" src="./TEDxSGNS Youth_files/X.png" alt="SGNS Dwarka" style="width: 100vw; height: 100vh; object-fit: contain; object-position: 55% 45%; opacity: 0.18; z-index: 1; position: absolute; left: 0px; top: 0px; transition: object-position 0.3s, opacity 0.3s; display: block;"><canvas id="stars-bg" style="display: block; position: absolute; left: 0px; top: 0px; width: 100vw; height: 100vh; z-index: 1; pointer-events: none;" width="390" height="844"></canvas><style>
+							@media (max-width: 700px) {
+								.home-bg-img { display: none !important; }
+								#stars-bg { display: block !important; }
+							}
+							@media (min-width: 701px) {
+								.home-bg-img { display: block !important; }
+								#stars-bg { display: none !important; }
+							}
+						</style><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: linear-gradient(120deg, rgba(230, 43, 30, 0.04) 0%, rgba(255, 255, 255, 0.1) 100%); z-index: 2; pointer-events: none;"></div><div class="home-hero-glass" style="background: transparent; backdrop-filter: none; z-index: 3;"><div class="home-hero-content" style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; max-width: 1200px; margin: 0px auto;"><div class="home-hero-left" style="flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column; align-items: flex-start;"><h1 class="home-hero-title"><span style="color: rgb(255, 255, 255);">Reimagine Diversity</span></h1><div class="home-hero-subtitle" style="color: rgb(230, 43, 30);">Where every difference is a new perspective.</div><div class="home-hero-btns" style="gap: 1.5rem; display: flex; flex-wrap: wrap;"><button class="home-red-btn modern-btn" style="background: linear-gradient(90deg, rgb(235, 0, 40) 60%, rgb(255, 94, 58) 100%); color: rgb(255, 255, 255); border: none; font-weight: 700; font-size: 1.25rem; padding: 1.15rem 2.8rem; border-radius: 2.2rem; min-width: 180px;">About Us</button></div></div><div class="white-card" style="background: rgb(255, 255, 255); border-radius: 20px; box-shadow: rgba(230, 43, 30, 0.133) 0px 6px 32px; padding: 2.1rem 1.1rem 1.5rem; max-width: 400px; width: 100%; border: 1.5px solid rgba(230, 43, 30, 0.133); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0.7rem 0px;"><div style="font-weight: 700; font-size: 1.13rem; color: rgb(230, 43, 30); margin-bottom: 0.5rem; letter-spacing: 1px;">TED<span style="color: rgb(230, 43, 30);">x</span>SGNS Youth</div><div style="font-size: 1.55rem; font-weight: 900; color: rgb(24, 24, 24); margin-bottom: 0.5rem; text-align: center; font-family: Montserrat, Arial, sans-serif;">Reimagine Diversity</div><div style="font-size: 1.08rem; color: rgb(68, 68, 68); margin-bottom: 1.2rem; text-align: center;"><span style="font-weight: 600;">Date:</span> 28 June 2025<br><span style="font-weight: 600;">Location:</span> New Delhi, India</div><div style="font-size: 1.01rem; color: rgb(136, 136, 136); margin-bottom: 1.3rem; text-align: center;">Join us for a day of inspiring talks, new perspectives, and a celebration of diversity!</div><a href="http://localhost:5173/#" style="display: inline-block; background: rgb(230, 43, 30); color: rgb(255, 255, 255); border-radius: 6px; padding: 0.85rem 2.1rem; font-weight: 700; font-size: 1.13rem; text-decoration: none; letter-spacing: 0.5px; box-shadow: rgba(230, 43, 30, 0.133) 0px 2px 8px; transition: background 0.18s, transform 0.18s, box-shadow 0.18s; cursor: pointer;">Nominate Yourself</a></div></div></div></div></div><div class="animated-gradient-divider"></div><section class="hero-counter-section"><div class="hero-counter-title">Event Starts In</div><div class="hero-counter"><div class="hero-counter-box"><div class="hero-counter-number">00</div><div class="hero-counter-label">Days</div></div><div class="hero-counter-box"><div class="hero-counter-number">14</div><div class="hero-counter-label">Hours</div></div><div class="hero-counter-box"><div class="hero-counter-number">07</div><div class="hero-counter-label">Minutes</div></div><div class="hero-counter-box"><div class="hero-counter-number">52</div><div class="hero-counter-label">Seconds</div></div></div></section><section class="tedx-sections" id="what-is-ted" style="color: rgb(24, 24, 24); background: none; margin: 2.5rem auto; max-width: 900px; width: 100%; padding: 0px;"><div class="tedx-section" style="background: rgb(255, 255, 255); color: rgb(24, 24, 24); box-shadow: rgba(230, 43, 30, 0.067) 0px 2px 16px; border: 1px solid rgb(242, 242, 242); margin-bottom: 2.5rem; border-radius: 18px; padding: 2.5rem;"><h2>What is <span style="color: rgb(230, 43, 30);">TED</span>?</h2><div class="animated-gradient-divider section-bar"></div><p>TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks. TED began in 1984 as a conference where Technology, Entertainment, and Design converged, and today covers almost all topics — from science to business to global issues — in more than 100 languages. Its mission is to make great ideas accessible and spark meaningful conversations. TED talks are shared freely online to reach a global audience and encourage learning and engagement.</p></div><div class="tedx-section" style="background: rgb(255, 255, 255); color: rgb(24, 24, 24); box-shadow: rgba(230, 43, 30, 0.067) 0px 2px 16px; border: 1px solid rgb(242, 242, 242); margin-bottom: 2.5rem; border-radius: 18px; padding: 2.5rem;"><h2>What is <span style="color: rgb(230, 43, 30);">TEDx</span>?</h2><div class="animated-gradient-divider section-bar"></div><p>TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection in a small group. These events are fully planned and coordinated independently under a free license granted by TED. TEDx aims to inspire innovation, foster learning, and build community around powerful ideas worth spreading.</p></div><div class="tedx-section" style="background: rgb(255, 255, 255); color: rgb(24, 24, 24); box-shadow: rgba(230, 43, 30, 0.067) 0px 2px 16px; border: 1px solid rgb(242, 242, 242); margin-bottom: 0px; border-radius: 18px; padding: 2.5rem;"><h2>What is <span style="color: rgb(230, 43, 30);">TEDxSGNS Youth</span>?</h2><div class="animated-gradient-divider section-bar"></div><p>TEDxSGNS Youth is an independently organized TED event hosted by Shanti Gyan Niketan Sr. Sec. Public School (SGNS), Dwarka. The event brings together bright young minds, thought leaders, and changemakers to share powerful stories and fresh ideas that challenge perspectives and ignite curiosity. It is a celebration of ideas worth spreading, curated with the passion and purpose that SGNS has always stood for.</p></div><div class="tedx-section" style="background: rgb(255, 255, 255); color: rgb(24, 24, 24); box-shadow: rgba(230, 43, 30, 0.067) 0px 2px 16px; border: 1px solid rgb(242, 242, 242); margin-bottom: 0px; border-radius: 18px; padding: 2.5rem;"><h2>Theme: <span style="color: rgb(230, 43, 30);">Reimagine Diversity</span></h2><div class="animated-gradient-divider section-bar"></div><div class="tedx-theme" style="font-size: 1.15rem; color: rgb(34, 34, 34);">"Reimagine Diversity" dares us to look at what has been invisible: the quiet voices, the unconventional misfits, the unheard narratives — and bring them into the spotlight. It is a theme that opens up conversations about neurodiversity, intersectionality, global cultures, gender fluidity, differing abilities, and more. By doing so, we aim to foster environments where everyone has the right not just to participate, but to thrive.</div></div></section><div class="slim-animated-divider" style="width: 100%; max-width: 900px; margin: 2.5rem auto 0px;"></div><div style="background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(249, 249, 249) 100%); box-shadow: rgba(230, 43, 30, 0.133) 0px 4px 24px; border-radius: 18px; margin: 2.5rem auto; padding: 2.5rem 1.5rem; max-width: 92vw; width: calc(100% - 4vw); position: relative;"><div style="position: absolute; top: -1.6rem; left: 2.5rem; background: rgb(230, 43, 30); color: rgb(255, 255, 255); padding: 0.4rem 1.2rem; border-radius: 1rem; font-weight: 700; font-size: 1.1rem; box-shadow: rgba(230, 43, 30, 0.2) 0px 2px 8px; letter-spacing: 1px;">Our Speakers</div><div class="carousel-container" style="background: transparent; margin: 0px;"><div class="carousel-track"><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/AanchalJain.jpg" alt="Aanchal Jain"><div class="carousel-overlay"><span>Aanchal Jain</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/AkankshaMadan.jpg" alt="Akanksha Madan"><div class="carousel-overlay"><span>Akanksha Madan</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/AvikaJain.jpg" alt="Avika Jain"><div class="carousel-overlay"><span>Avika Jain</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/AviratJain.jpg" alt="Avirat Jain"><div class="carousel-overlay"><span>Avirat Jain</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/Dr.AtulMehta.jpg" alt="Dr. Atul Mehta"><div class="carousel-overlay"><span>Dr. Atul Mehta</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/Dr.KiranSwami.jpg" alt="Dr. Kiran Swami"><div class="carousel-overlay"><span>Dr. Kiran Swami</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/Dr.MalaDasguptaSengupta.jpg" alt="Dr. Mala Dasgupta Sengupta"><div class="carousel-overlay"><span>Dr. Mala Dasgupta Sengupta</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/Dr.SamikshaBorele.jpg" alt="Dr. Samiksha Borele"><div class="carousel-overlay"><span>Dr. Samiksha Borele</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/Dr.VarshaJain.jpg" alt="Dr. Varsha Jain"><div class="carousel-overlay"><span>Dr. Varsha Jain</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/MahiraJuneja.jpg" alt="Mahira Juneja"><div class="carousel-overlay"><span>Mahira Juneja</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/MaithreyeMurali.jpg" alt="Maithreye Murali"><div class="carousel-overlay"><span>Maithreye Murali</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/MamtaChanderChandani.jpg" alt="Mamta Chander Chandani"><div class="carousel-overlay"><span>Mamta Chander Chandani</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/MamtaSingh.jpg" alt="Mamta Singh"><div class="carousel-overlay"><span>Mamta Singh</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/MeenakshiSaroha.jpg" alt="Meenakshi Saroha"><div class="carousel-overlay"><span>Meenakshi Saroha</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/MinshuGarg.jpg" alt="Minshu Garg"><div class="carousel-overlay"><span>Minshu Garg</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/PraveenKShukla.jpg" alt="Praveen K Shukla"><div class="carousel-overlay"><span>Praveen K Shukla</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/Prof.Dr.ParinSomani.jpg" alt="Prof. Dr. Parin Somani"><div class="carousel-overlay"><span>Prof. Dr. Parin Somani</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/SahilMakkar.jpg" alt="Sahil Makkar"><div class="carousel-overlay"><span>Sahil Makkar</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/SaritaTripathy.jpg" alt="Sarita Tripathy"><div class="carousel-overlay"><span>Sarita Tripathy</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/SayeshaKhurana.jpg" alt="Sayesha Khurana"><div class="carousel-overlay"><span>Sayesha Khurana</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/SonalAgarwalRawat.jpg" alt="Sonal Agarwal Rawat"><div class="carousel-overlay"><span>Sonal Agarwal Rawat</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/SoumyaDhani.jpg" alt="Soumya Dhani"><div class="carousel-overlay"><span>Soumya Dhani</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/SushmitaTripathi.jpg" alt="Sushmita Tripathi"><div class="carousel-overlay"><span>Sushmita Tripathi</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/TiyanaBorele.jpg" alt="Tiyana Borele"><div class="carousel-overlay"><span>Tiyana Borele</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/VanshikaArora.jpg" alt="Vanshika Arora"><div class="carousel-overlay"><span>Vanshika Arora</span></div></div><div class="carousel-card" tabindex="0" style="cursor: pointer;"><img src="./TEDxSGNS Youth_files/VikashGupta.jpg" alt="Vikash Gupta"><div class="carousel-overlay"><span>Vikash Gupta</span></div></div></div></div></div></div><style>
+  @media (max-width: 600px) {
+    .navbar {
+      justify-content: flex-start !important;
+      padding-left: 1rem !important;
+    }
+    .navbar-logo {
+      margin-left: 0 !important;
+      text-align: left !important;
+    }
+    .hero-image {
+      width: 100vw !important;
+      min-width: 100vw !important;
+      max-width: 100vw !important;
+      left: 0 !important;
+      right: 0 !important;
+      transform: none !important;
+      border-radius: 0 0 18px 18px !important;
+      object-fit: cover !important;
+      margin: 0 !important;
+      display: block !important;
+      position: relative !important;
+    }
+    .hero-section, .hero-container {
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      left: 0 !important;
+      right: 0 !important;
+    }
+    .hero-buttons {
+      flex-direction: column !important;
+      gap: 0.7rem !important;
+      align-items: stretch !important;
+    }
+    .nominate-btn {
+      display: block !important;
+      width: 100% !important;
+      margin: 0.5rem 0 !important;
+      font-size: 1.1rem !important;
+      padding: 0.9rem 0 !important;
+      background: linear-gradient(90deg, #e62b1e, #ff7e5f) !important;
+      color: #fff !important;
+      border-radius: 2rem !important;
+      font-weight: bold !important;
+      border: none !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+  @media (max-width: 700px) {
+    .home-hero-content {
+      gap: 0.5rem !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .home-hero-left {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .home-hero-btns {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .white-card {
+      margin: 1.2rem auto 0.7rem auto !important;
+      padding: 1.1rem 0.7rem 1.1rem 0.7rem !important;
+    }
+    .navbar {
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+  @media (max-width: 500px) {
+    .white-card {
+      margin: 1rem auto 0.5rem auto !important;
+      padding: 0.7rem 0.3rem 0.9rem 0.3rem !important;
+    }
+  }
+</style></div><footer class="footer" style="background: rgb(17, 17, 17); color: rgb(255, 255, 255); padding: 2.5rem 0px 1.5rem; border-top: 6px solid rgb(24, 24, 24);"><div class="footer-inner" style="width: 100%; max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0px; flex-wrap: wrap;"><div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem; min-width: 160px; margin: 0px; width: 100%;"><div style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem;"><div style="font-weight: 700; font-size: 1.35rem; color: rgb(255, 255, 255); letter-spacing: 1px; text-align: center;">TED<span style="color: rgb(230, 43, 30);">x</span>SGNS Youth</div><img src="./TEDxSGNS Youth_files/X.png" alt="X" style="height: 2.2rem; width: auto; display: block; margin: 0.3rem auto;"><div style="display: flex; flex-direction: row; align-items: center; gap: 0.5rem; margin-top: 0.1rem; margin-left: 0px; justify-content: center;"><span style="color: rgb(230, 43, 30); font-weight: 700; font-size: 1.15rem; letter-spacing: 1px;">Reimagine</span><span style="color: rgb(255, 255, 255); font-weight: 700; font-size: 1.15rem; letter-spacing: 1px;">Diversity</span></div></div></div><div style="display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 0.7rem; min-width: 220px; margin-right: 3.5rem;"><nav><ul style="display: flex; flex-direction: row; gap: 1.1rem; list-style: none; padding: 0px; margin: 0px; font-weight: 400; font-size: 1.08rem; align-items: center; justify-content: flex-end;"><li><a href="http://localhost:5173/" class="footer-link">Home</a></li><li><a href="http://localhost:5173/about" class="footer-link">About</a></li><li><a href="http://localhost:5173/speakers" class="footer-link">Speakers</a></li><li><a href="http://localhost:5173/nomination" class="footer-link">Nomination</a></li><li><a href="http://localhost:5173/rules" class="footer-link">Rules</a></li><li><a class="footer-link footer-contact-btn" href="http://localhost:5173/contact" style="background: rgb(230, 43, 30); color: rgb(255, 255, 255); border-radius: 2rem; padding: 0.45rem 1.3rem; font-weight: 700; font-size: 1.08rem; box-shadow: rgba(230, 43, 30, 0.133) 0px 2px 8px; margin-left: 0.7rem; text-decoration: none; display: inline-block; transition: background 0.18s, color 0.18s;">Contact Us</a></li></ul></nav></div><div style="color: rgb(255, 255, 255); font-weight: 400; font-size: 1.05rem; text-align: right; min-width: 180px; justify-self: end;">© 2025 TEDxSGNS Youth. All rights reserved.</div></div><style>
+        .footer-link {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.18s;
+          padding: 0.2rem 0.5rem;
+          border-radius: 1rem;
+        }
+        .footer-link:hover {
+          color: #e62b1e;
+        }
+        @media (max-width: 900px) {
+          .footer-inner {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 1.2rem !important;
+          }
+          .footer-link {
+            font-size: 1rem !important;
+          }
+        }
+        @media (max-width: 600px) {
+          .footer-inner {
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 1.2rem !important;
+            padding: 0 1rem !important;
+          }
+          .footer-link {
+            font-size: 0.95rem !important;
+            padding: 0.15rem 0.3rem !important;
+          }
+          .footer nav ul {
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 0.7rem !important;
+          }
+          .footer nav ul li {
+            margin-bottom: 0.3rem !important;
+          }
+          .footer > div > div {
+            width: 100% !important;
+            text-align: center !important;
+            margin: 0 !important;
+            min-width: 0 !important;
+          }
+        }
+      </style></footer></div></div>
+    <script type="module" src="./TEDxSGNS Youth_files/main.jsx"></script>
+  
+<button id="footer-up-btn" title="Back to top" style="position: fixed; right: 2.2rem; bottom: 2.2rem; background: rgb(224, 179, 106); border: none; border-radius: 50%; width: 48px; height: 48px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: rgba(0, 0, 0, 0.133) 0px 2px 8px; z-index: 1000; transition: background 0.18s;"><span style="font-size:2rem;color:#181818;font-weight:700;line-height:1;">↑</span></button></body></html>

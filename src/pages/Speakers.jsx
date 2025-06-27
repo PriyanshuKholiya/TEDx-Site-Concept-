@@ -1,40 +1,39 @@
 import React from "react";
 
 const speakers = [
-  { name: "Aanchal Jain", title: "title", img: "/Speakers/AanchalJain.jpg", desc: "description for speaker 1" },
-  { name: "Akanksha Madan", title: "title", img: "/Speakers/AkankshaMadan.jpg", desc: "description for speaker 2" },
-  { name: "Avika Jain", title: "title", img: "/Speakers/AvikaJain.jpg", desc: "description for speaker 3" },
-  { name: "Avirat Jain", title: "title", img: "/Speakers/AviratJain.jpg", desc: "description for speaker 4" },
-  { name: "Dr. Atul Mehta", title: "title", img: "/Speakers/Dr.AtulMehta.jpg", desc: "description for speaker 5" },
-  { name: "Dr. Kiran Swami", title: "title", img: "/Speakers/Dr.KiranSwami.jpg", desc: "description for speaker 6" },
-  { name: "Dr. Mala Dasgupta Sengupta", title: "title", img: "/Speakers/Dr.MalaDasguptaSengupta.jpg", desc: "description for speaker 7" },
-  { name: "Dr. Samiksha Borele", title: "title", img: "/Speakers/Dr.SamikshaBorele.jpg", desc: "description for speaker 8" },
-  { name: "Dr. Shankar Goenka", title: "title", img: "/Speakers/Dr.ShankarGoenka.jpg", desc: "description for speaker 27" },
-  { name: "Dr. Varsha Jain", title: "title", img: "/Speakers/Dr.VarshaJain.jpg", desc: "description for speaker 9" },
-  { name: "Mahira Juneja", title: "title", img: "/Speakers/MahiraJuneja.jpg", desc: "description for speaker 10" },
-  { name: "Maithreye Murali", title: "title", img: "/Speakers/MaithreyeMurali.jpg", desc: "description for speaker 11" },
-  { name: "Mamta Chander Chandani", title: "title", img: "/Speakers/MamtaChanderChandani.jpg", desc: "description for speaker 12" },
-  { name: "Mamta Singh", title: "title", img: "/Speakers/MamtaSingh.jpg", desc: "description for speaker 13" },
-  { name: "Meenakshi Saroha", title: "title", img: "/Speakers/MeenakshiSaroha.jpg", desc: "description for speaker 14" },
-  { name: "Minshu Garg", title: "title", img: "/Speakers/MinshuGarg.jpg", desc: "description for speaker 15" },
-  { name: "Praveen K Shukla", title: "title", img: "/Speakers/PraveenKShukla.jpg", desc: "description for speaker 16" },
-  { name: "Prof. Dr. Parin Somani", title: "title", img: "/Speakers/Prof.Dr.ParinSomani.jpg", desc: "description for speaker 17" },
-  { name: "Sahil Makkar", title: "title", img: "/Speakers/SahilMakkar.jpg", desc: "description for speaker 18" },
-  { name: "Sarita Tripathy", title: "title", img: "/Speakers/SaritaTripathy.jpg", desc: "description for speaker 19" },
-  { name: "Sayesha Khurana", title: "title", img: "/Speakers/SayeshaKhurana.jpg", desc: "description for speaker 20" },
-  { name: "Sonal Agarwal Rawat", title: "title", img: "/Speakers/SonalAgarwalRawat.jpg", desc: "description for speaker 21" },
-  { name: "Soumya Dhani", title: "title", img: "/Speakers/SoumyaDhani.jpg", desc: "description for speaker 22" },
-  { name: "Sushmita Tripathi", title: "title", img: "/Speakers/SushmitaTripathi.jpg", desc: "description for speaker 23" },
-  { name: "Tiyana Borele", title: "title", img: "/Speakers/TiyanaBorele.jpg", desc: "description for speaker 24" },
-  { name: "Vanshika Arora", title: "title", img: "/Speakers/VanshikaArora.jpg", desc: "description for speaker 25" },
-  { name: "Vikash Gupta", title: "title", img: "/Speakers/VikashGupta.jpg", desc: "description for speaker 26" }
-  
+  { name: "Aanchal Jain", title: "title", img: "/Speakers/AanchalJain.jpg", desc: "" },
+  { name: "Akanksha Madan", title: "title", img: "/Speakers/AkankshaMadan.jpg", desc: "" },
+  { name: "Avika Jain", title: "title", img: "/Speakers/AvikaJain.jpg", desc: "" },
+  { name: "Avirat Jain", title: "title", img: "/Speakers/AviratJain.jpg", desc: "" },
+  { name: "Dr. Atul Mehta", title: "title", img: "/Speakers/Dr.AtulMehta.jpg", desc: "" },
+  { name: "Dr. Kiran Swami", title: "title", img: "/Speakers/Dr.KiranSwami.jpg", desc: "" },
+  { name: "Dr. Mala Dasgupta Sengupta", title: "title", img: "/Speakers/Dr.MalaDasguptaSengupta.jpg", desc: "" },
+  { name: "Dr. Samiksha Borele", title: "title", img: "/Speakers/Dr.SamikshaBorele.jpg", desc: "" },
+  { name: "Dr. Shankar Goenka", title: "title", img: "/Speakers/Dr.ShankarGoenka.jpg", desc: "" },
+  { name: "Dr. Varsha Jain", title: "title", img: "/Speakers/Dr.VarshaJain.jpg", desc: "" },
+  { name: "Mahira Juneja", title: "title", img: "/Speakers/MahiraJuneja.jpg", desc: "" },
+  { name: "Maithreye Murali", title: "title", img: "/Speakers/MaithreyeMurali.jpg", desc: "" },
+  { name: "Mamta Chander Chandani", title: "title", img: "/Speakers/MamtaChanderChandani.jpg", desc: "" },
+  { name: "Mamta Singh", title: "title", img: "/Speakers/MamtaSingh.jpg", desc: "" },
+  { name: "Meenakshi Saroha", title: "title", img: "/Speakers/MeenakshiSaroha.jpg", desc: "" },
+  { name: "Minshu Garg", title: "title", img: "/Speakers/MinshuGarg.jpg", desc: "" },
+  { name: "Praveen K Shukla", title: "title", img: "/Speakers/PraveenKShukla.jpg", desc: "" },
+  { name: "Prof. Dr. Parin Somani", title: "title", img: "/Speakers/Prof.Dr.ParinSomani.jpg", desc: "" },
+  { name: "Sahil Makkar", title: "title", img: "/Speakers/SahilMakkar.jpg", desc: "" },
+  { name: "Sarita Tripathy", title: "title", img: "/Speakers/SaritaTripathy.jpg", desc: "" },
+  { name: "Sayesha Khurana", title: "title", img: "/Speakers/SayeshaKhurana.jpg", desc: "" },
+  { name: "Sonal Agarwal Rawat", title: "title", img: "/Speakers/SonalAgarwalRawat.jpg", desc: "" },
+  { name: "Soumya Dhani", title: "title", img: "/Speakers/SoumyaDhani.jpg", desc: "" },
+  { name: "Sushmita Tripathi", title: "title", img: "/Speakers/SushmitaTripathi.jpg", desc: "" },
+  { name: "Tiyana Borele", title: "title", img: "/Speakers/TiyanaBorele.jpg", desc: "" },
+  { name: "Vanshika Arora", title: "title", img: "/Speakers/VanshikaArora.jpg", desc: "" },
+  { name: "Vikash Gupta", title: "title", img: "/Speakers/VikashGupta.jpg", desc: "" }
 ];
 
 export default function Speakers() {
   return (
     <div className="page speakers">
-      <h1 style={{ color: "#e62b1e" }}>Our Eminent Speakers</h1>
+      <h1 style={{ color: "#e62b1e", marginTop: '2.2rem', fontSize: '2rem', fontWeight: 900, letterSpacing: '1px', textAlign: 'center' }}>Our Eminent Speakers</h1>
       <div className="animated-gradient-divider section-bar" />
       <section style={{ margin: "2.5rem 0 0 0", width: "100%" }}>
         <div
@@ -46,7 +45,8 @@ export default function Speakers() {
             padding: "2rem 0 2rem 0",
             margin: "0 auto",
             maxWidth: "1200px",
-            width: "100%"
+            width: "100%",
+            justifyItems: "center"
           }}
         >
           {speakers.map((sp, i) => (
@@ -74,8 +74,7 @@ export default function Speakers() {
             >
               <div style={{
                 width: '100%',
-                height: '320px',
-                aspectRatio: '1 / 1',
+                height: '380px',
                 borderRadius: '18px 18px 0 0',
                 overflow: 'hidden',
                 background: '#222',
@@ -91,7 +90,12 @@ export default function Speakers() {
                     height: '100%',
                     objectFit: 'cover',
                     borderRadius: '18px 18px 0 0',
-                    background: '#222'
+                    background: '#222',
+                    display: 'block',
+                    maxHeight: '380px',
+                    aspectRatio: '1/1',
+                    minHeight: '100%',
+                    minWidth: '100%',
                   }}
                 />
               </div>

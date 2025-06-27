@@ -40,7 +40,7 @@ export default function Footer() {
       padding: "2.5rem 0 1.5rem 0",
       borderTop: "6px solid #181818"
     }}>
-      <div style={{
+      <div className="footer-inner" style={{
         width: "100%",
         maxWidth: "1200px",
         margin: "0 auto",
@@ -54,58 +54,38 @@ export default function Footer() {
         <div style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: "center",
+          justifyContent: "center",
           gap: "0.2rem",
           minWidth: 160,
-          marginLeft: "-2.2rem"
+          margin: 0,
+          width: "100%"
         }}>
-          <img
-            src="/Logo.png"
-            alt="TEDxSGNS Youth"
-            style={{
-              height: "2.8rem",
-              width: "auto",
-              display: "block",
-              marginBottom: "0.2rem"
-            }}
-          />
           <div style={{
             width: "100%",
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
+            flexDirection: "column",
             alignItems: "center",
-            marginBottom: "0.1rem"
+            justifyContent: "center",
+            gap: "0.2rem"
           }}>
-            <div style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center"
-            }}>
-              {/* Spacer to align X under "GN" of SGNS */}
-              <span style={{ display: "inline-block", width: "6.2rem" }}></span>
-              <img
-                src="/X.png"
-                alt="X"
-                style={{
-                  height: "2.2rem",
-                  width: "auto",
-                  display: "block"
-                }}
-              />
+            <div style={{ fontWeight: 700, fontSize: "1.35rem", color: "#fff", letterSpacing: "1px", textAlign: "center" }}>
+              TED<span style={{ color: "#e62b1e" }}>x</span>SGNS Youth
             </div>
-          </div>
-          <div style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            gap: "0.5rem",
-            marginTop: "0.1rem",
-            marginLeft: "0.2rem"
-          }}>
-            <span style={{ color: "#e62b1e", fontWeight: 700, fontSize: "1.15rem", letterSpacing: "1px" }}>Reimagine</span>
-            <span style={{ color: "#fff", fontWeight: 700, fontSize: "1.15rem", letterSpacing: "1px" }}>Diversity</span>
+            <img
+              src="/X.png"
+              alt="X"
+              style={{
+                height: "2.2rem",
+                width: "auto",
+                display: "block",
+                margin: "0.3rem auto"
+              }}
+            />
+            <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "0.5rem", marginTop: "0.1rem", marginLeft: 0, justifyContent: "center" }}>
+              <span style={{ color: "#e62b1e", fontWeight: 700, fontSize: "1.15rem", letterSpacing: "1px" }}>Reimagine</span>
+              <span style={{ color: "#fff", fontWeight: 700, fontSize: "1.15rem", letterSpacing: "1px" }}>Diversity</span>
+            </div>
           </div>
         </div>
         {/* Center: Navigation links, push left for more gap with copyright */}
@@ -137,7 +117,19 @@ export default function Footer() {
               <li><a href="/nomination" className="footer-link">Nomination</a></li>
               <li><a href="/rules" className="footer-link">Rules</a></li>
               <li>
-                <Link to="/contact" className="footer-link">Contact</Link>
+                <Link to="/contact" className="footer-link footer-contact-btn" style={{
+                  background: '#e62b1e',
+                  color: '#fff',
+                  borderRadius: '2rem',
+                  padding: '0.45rem 1.3rem',
+                  fontWeight: 700,
+                  fontSize: '1.08rem',
+                  boxShadow: '0 2px 8px #e62b1e22',
+                  marginLeft: '0.7rem',
+                  textDecoration: 'none',
+                  display: 'inline-block',
+                  transition: 'background 0.18s, color 0.18s'
+                }}>Contact Us</Link>
               </li>
             </ul>
           </nav>
@@ -166,7 +158,7 @@ export default function Footer() {
           color: #e62b1e;
         }
         @media (max-width: 900px) {
-          .footer > div {
+          .footer-inner {
             display: flex !important;
             flex-direction: column !important;
             align-items: center !important;
@@ -177,12 +169,29 @@ export default function Footer() {
           }
         }
         @media (max-width: 600px) {
-          .footer > div {
-            gap: 0.7rem !important;
+          .footer-inner {
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 1.2rem !important;
+            padding: 0 1rem !important;
           }
           .footer-link {
             font-size: 0.95rem !important;
             padding: 0.15rem 0.3rem !important;
+          }
+          .footer nav ul {
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 0.7rem !important;
+          }
+          .footer nav ul li {
+            margin-bottom: 0.3rem !important;
+          }
+          .footer > div > div {
+            width: 100% !important;
+            text-align: center !important;
+            margin: 0 !important;
+            min-width: 0 !important;
           }
         }
       `}</style>

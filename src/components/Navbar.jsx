@@ -64,12 +64,12 @@ export default function Navbar() {
             </button>
           </div>
           <ul className="navbar-links-mobile">
-            <li><NavLink to="/" onClick={() => setMobileMenuOpen(false)}>Home</NavLink></li>
-            <li><NavLink to="/about" onClick={() => setMobileMenuOpen(false)}>About</NavLink></li>
-            <li><NavLink to="/speakers" onClick={() => setMobileMenuOpen(false)}>Speakers</NavLink></li>
-            <li><NavLink to="/nomination" onClick={() => setMobileMenuOpen(false)}>Nomination</NavLink></li>
-            <li><NavLink to="/rules" onClick={() => setMobileMenuOpen(false)}>Rules</NavLink></li>
-            {/* <li><NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink></li> */}
+            <li><NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? 'active-menu-rect' : ''}>Home</NavLink></li>
+            <li><NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? 'active-menu-rect' : ''}>About</NavLink></li>
+            <li><NavLink to="/speakers" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? 'active-menu-rect' : ''}>Speakers</NavLink></li>
+            <li><NavLink to="/nomination" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? 'active-menu-rect' : ''}>Nomination</NavLink></li>
+            <li><NavLink to="/rules" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? 'active-menu-rect' : ''}>Rules</NavLink></li>
+            {/* <li><NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? 'active-menu-rect' : ''}>Contact</NavLink></li> */}
           </ul>
         </div>
       )}
