@@ -70,46 +70,6 @@ export default function Home() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
-	// Stars animation for mobile
-	useEffect(() => {
-		const canvas = document.getElementById('stars-bg');
-		if (!canvas) return;
-		const ctx = canvas.getContext('2d');
-		const w = window.innerWidth, h = window.innerHeight;
-		canvas.width = w;
-		canvas.height = h;
-		// 3D tunnel starfield effect, even more stars for desktop
-		const numStars = w > 700 ? 650 : 60;
-		const stars = Array.from({length: numStars}, () => ({
-			x: (Math.random() - 0.5) * w,
-			y: (Math.random() - 0.5) * h,
-			z: Math.random() * w
-		}));
-		function draw() {
-			ctx.fillStyle = '#000';
-			ctx.fillRect(0, 0, w, h);
-			for (const s of stars) {
-				s.z -= 0.7; // slow for relaxing vibe
-				if (s.z < 1) {
-					s.x = (Math.random() - 0.5) * w;
-					s.y = (Math.random() - 0.5) * h;
-					s.z = w;
-				}
-				const sx = w / 2 + (s.x / s.z) * w * 0.5;
-				const sy = h / 2 + (s.y / s.z) * h * 0.5;
-				const r = Math.max(0.5, 2.5 - s.z / w * 2);
-				ctx.beginPath();
-				ctx.arc(sx, sy, r, 0, 2 * Math.PI);
-				ctx.fillStyle = `rgba(255,255,255,${0.7 - s.z / w * 0.6})`;
-				ctx.shadowColor = 'rgba(255, 255, 255, 0.5)';
-				ctx.shadowBlur = 6;
-				ctx.fill();
-			}
-			requestAnimationFrame(draw);
-		}
-		draw();
-	}, []);
-
 	const handleTellMeMore = () => {
 		const section = document.getElementById("theme-section");
 		if (section) section.scrollIntoView({ behavior: "smooth" });
@@ -137,7 +97,7 @@ export default function Home() {
 					<div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
 						{/* Desktop: X.png as hero background */}
 						<img
-							className="home-bg-img"
+							className="home-bg-img desktop-hero"
 							src="/X.png"
 							alt="TEDxSGNS Youth"
 							style={{
@@ -154,21 +114,57 @@ export default function Home() {
 								display: 'block'
 							}}
 						/>
-						{/* Mobile: Stars Canvas */}
-						<canvas id="stars-bg" style={{
-							display: 'none',
-							position: 'absolute',
-							left: 0,
-							top: 0,
-							width: '100vw',
-							height: '100vh',
-							zIndex: 1,
-							pointerEvents: 'none',
-						}} />
+						{/* Mobile: TEDX.webp as hero background */}
+						<img
+							className="home-bg-img mobile-hero"
+							src="/TEDX.webp"
+							alt="TEDxSGNS Youth"
+							style={{
+								width: "100vw",
+								height: "100vh",
+								objectFit: "cover",
+								objectPosition: "center 10%",
+								opacity: 0.15,
+								zIndex: 1,
+								position: "absolute",
+								left: 0,
+								top: 0,
+								transition: 'object-position 0.3s, opacity 0.3s',
+								display: 'none'
+							}}
+						/>
+						{/* Overlay TEDX logo for mobile, positioned between button and card */}
+						<img
+							className="tedx-overlay-logo"
+							src="/TEDX.webp"
+							alt="TEDx Logo Overlay"
+							style={{
+								position: 'absolute',
+								left: '50%',
+								top: '34%', // Adjust as needed for perfect placement
+								transform: 'translateX(-50%)',
+								width: '70vw', // Adjust size as needed
+								maxWidth: '350px',
+								zIndex: 5,
+								opacity: 0.7,
+								display: 'none',
+								pointerEvents: 'none',
+								filter: 'drop-shadow(0 0 18px #fff8)',
+								mixBlendMode: 'lighten',
+								borderRadius: '18px',
+								background: 'transparent',
+							}}
+						/>
 						<style>{`
 							@media (max-width: 700px) {
-								.home-bg-img { display: none !important; }
-								#stars-bg { display: block !important; }
+								.desktop-hero { display: none !important; }
+								.mobile-hero { display: none !important; }
+								.tedx-overlay-logo { display: block !important; }
+							}
+							@media (min-width: 701px) {
+								.desktop-hero { display: block !important; }
+								.mobile-hero { display: none !important; }
+								.tedx-overlay-logo { display: none !important; }
 							}
 						`}</style>
 						{/* Light overlay for readability */}
@@ -432,7 +428,7 @@ export default function Home() {
 									className="carousel-card"
 									key={i}
 									tabIndex={0}
-									onClick={() => window.location.href = `/speakers`}
+									onClick={() => navigate("/speakers")}
 									style={{ cursor: "pointer" }}
 								>
 									<img src={sp.img} alt={sp.name} />
