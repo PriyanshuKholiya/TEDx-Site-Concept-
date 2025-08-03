@@ -9,7 +9,6 @@ const speakers = [
   { name: "Dr. Kiran Swami", title: "Member - Tathagat Foundation", img: "/Speakers/Dr.KiranSwami.jpg", desc: "" },
   { name: "Dr. Mala Dasgupta Sengupta", title: "FOunder & CEO - Anubhav English Classes", img: "/Speakers/Dr.MalaDasguptaSengupta.jpg", desc: "" },
   { name: "Dr. Samiksha Borele", title: "President - Borele World, Dubai", img: "/Speakers/Dr.SamikshaBorele.jpg", desc: "" },
-  { name: "Dr. Shankar Goenka", title: "Managing Director - WOW Go Green", img: "/Speakers/Dr.ShankarGoenka.jpg", desc: "" },
   { name: "Dr. Varsha Jain", title: "Founder & CEO - Meavika Jewelz ", img: "/Speakers/Dr.VarshaJain.jpg", desc: "" },
   { name: "Mahira Juneja", title: "Student - Modern School, Vasant Vihar, New Delhi", img: "/Speakers/MahiraJuneja.jpg", desc: "" },
   { name: "Maithreye Murali", title: "Founder & CEO - Miracle Me", img: "/Speakers/MaithreyeMurali.jpg", desc: "" },

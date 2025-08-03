@@ -5,9 +5,10 @@ import About from './pages/About';
 import Speakers from './pages/Speakers';
 import Nomination from './pages/Registration';
 import Rules from './pages/Rules';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
 import Contact from './pages/Contact';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
