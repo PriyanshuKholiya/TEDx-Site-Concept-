@@ -53,8 +53,10 @@ export default function Speakers() {
     { name: "Prof. (Dr.) Manju Chhugani", title: "Professor & Founder Dean - SNSAH, Jamia Hamdard", img: "/speakers2026/17.png", desc: "Speaker" },
     { name: "Seema Gill", title: "Founder & CEO - BIGSTORY Network, Screenage Media Pvt. Ltd.", img: "/speakers2026/18.png", desc: "Speaker" },
     { name: "Sony Goyal", title: "Founder - Punjab100, Prayaas Educational & Charitable Society", img: "/speakers2026/19.png", desc: "Speaker" },
-    { name: "Sukanya Kumar Nambiar", title: "Co-Founder & Director - The Preschool Olympiad, Bharat Shishu Vidya Initiatives Pvt. Ltd.", img: "/speakers2026/20.png", desc: "Speaker" }
-  ];
+    { name: "Sukanya Kumar Nambiar", title: "Co-Founder & Director - The Preschool Olympiad, Bharat Shishu Vidya Initiatives Pvt. Ltd.", img: "/speakers2026/20.png", desc: "Speaker" },
+    { name: "Jyoti Sachdeva", title: "Self-love Coach, Crystal & Sound Therapist - Svasutra", img: "/speakers2026/21.jpg", desc: "Speaker" },
+    { name: "Gurmeet Singh Arora", title: "Education Leader & Montessori Education Advocate - Bhupindra International Public School & ABC Montessori", img: "/speakers2026/22.jpg", desc: "Speaker" }
+];
 
   const currentSpeakers = activeYear === 2025 ? speakers2025 : speakers2026;
 
