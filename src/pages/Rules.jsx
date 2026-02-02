@@ -1,148 +1,51 @@
 import React from "react";
 
 export default function Rules() {
+  const rulesList = [
+    "All attendees must register prior to the event and carry a valid photo ID (students should carry their university ID).",
+    "Please arrive on time and be seated 15 minutes before sessions begin. Entry may be restricted during talks.",
+    "Maintain decorum and respect all speakers, performers and participants; keep phones on silent/vibrate.",
+    "Photography is allowed only in designated areas. Flash, tripods or live streaming/recording require prior written permission.",
+    "Follow instructions given by volunteers and staff. Queue discipline and designated entry/exit routes must be observed.",
+    "Keep the campus clean. Use dustbins; do not deface or damage university property.",
+    "Prohibited items: outside food/drinks, alcohol, tobacco/e‑cigarettes, sharp objects, banners/placards, laser pointers, drones and any illegal substances."
+  ];
+
+  const safetyList = [
+    "Cooperate with university security and police personnel. Random bag checks may be conducted.",
+    "Carry your student/employee ID or government-issued photo ID at all times and present it on request.",
+    "Access to restricted/academic areas is not permitted unless authorised by the university.",
+    "Keep emergency exits and corridors clear. In an emergency, follow public announcements and instructions from volunteers.",
+    "First-aid and medical assistance are available on site. Inform a volunteer immediately if you feel unwell.",
+    "Lost and Found is managed at the help desk; organisers are not responsible for loss/theft of personal belongings.",
+    "The organisers reserve the right to refuse admission or ask any person to leave for security or behavioural reasons. Refunds will not be issued in such cases."
+  ];
+
+  const RuleCard = ({ title, items }) => (
+    <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_8px_30px_rgb(230,43,30,0.06)] transition-shadow duration-300">
+      <h2 className="text-3xl md:text-4xl font-black text-ted-red text-center mb-10 uppercase tracking-tight">
+        {title}
+      </h2>
+      <ul className="space-y-5">
+        {items.map((rule, idx) => (
+          <li key={idx} className="flex items-start gap-5 group">
+            {/* Custom Red Dot Bullet matching the image */}
+            <span className="w-3 h-3 md:w-4 md:h-4 bg-ted-red rounded-full mt-2.5 flex-shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-200"></span>
+            <span className="text-gray-700 text-lg leading-relaxed font-medium">
+              {rule}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
-    <div
-      className="page rules"
-      style={{
-        minHeight: "60vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        paddingTop: "2rem",
-        paddingBottom: "2rem",
-        paddingLeft: '0.7rem',
-        paddingRight: '0.7rem',
-        fontFamily: 'Montserrat, Arial, sans-serif',
-        background: '#fff'
-      }}
-    >
-      <h1 style={{
-        fontWeight: 900,
-        fontSize: "2rem",
-        textAlign: "center",
-        marginBottom: "1.2rem",
-        letterSpacing: "1px",
-        color: '#e62b1e',
-        fontFamily: 'Montserrat, Arial, sans-serif'
-      }}>
-        Event Rules & Guidelines
-      </h1>
-      <div
-        className="animated-gradient-divider section-bar"
-        style={{
-          marginTop: "0.2rem",
-          marginBottom: "1.1rem",
-          width: "220px",
-          maxWidth: "90vw"
-        }}
-      />
-      <ul
-        style={{
-          maxWidth: '700px',
-          margin: '2rem auto 0 auto',
-          fontSize: '1.08rem',
-          color: '#222',
-          textAlign: 'left',
-          lineHeight: 1.7,
-          paddingLeft: '1.2rem',
-          background: 'rgba(255,255,255,0.97)',
-          borderRadius: '10px',
-          boxShadow: '0 2px 12px #e62b1e11',
-          fontFamily: 'Montserrat, Arial, sans-serif',
-          padding: '1.1rem 1.2rem',
-          marginBottom: '2.2rem',
-          listStyle: 'none'
-        }}
-      >
-        {[
-          'All attendees must register prior to the event.',
-          'Maintain decorum and respect all speakers and participants.',
-          'No recording or live streaming without permission.',
-          'Follow all safety protocols as applicable.',
-          'Contact the organizing team for any queries.'
-        ].map((rule, idx) => (
-          <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '0.7rem' }}>
-            <span style={{
-              display: 'inline-block',
-              width: '0.85em',
-              height: '0.85em',
-              background: '#e62b1e',
-              borderRadius: '50%',
-              marginRight: '1em',
-              marginTop: '0.45em',
-              flexShrink: 0
-            }}></span>
-            <span>{rule}</span>
-          </li>
-        ))}
-      </ul>
-      <h1
-        style={{
-          marginTop: "3.5rem",
-          fontWeight: 900,
-          fontSize: "1.5rem",
-          textAlign: "center",
-          marginBottom: "1.2rem",
-          letterSpacing: "1px",
-          color: '#e62b1e',
-          fontFamily: 'Montserrat, Arial, sans-serif'
-        }}
-      >
-        Safety & Security
-      </h1>
-      <div
-        className="animated-gradient-divider section-bar"
-        style={{
-          marginTop: "0.2rem",
-          marginBottom: "1.1rem",
-          width: "220px",
-          maxWidth: "90vw"
-        }}
-      />
-      <ul
-        style={{
-          maxWidth: '700px',
-          margin: '2rem auto 0 auto',
-          fontSize: '1.08rem',
-          color: '#222',
-          textAlign: 'left',
-          lineHeight: 1.7,
-          paddingLeft: "1.2rem",
-          background: 'rgba(255,255,255,0.97)',
-          borderRadius: '10px',
-          boxShadow: '0 2px 12px #e62b1e11',
-          fontFamily: 'Montserrat, Arial, sans-serif',
-          padding: '1.1rem 1.2rem',
-          marginBottom: '2.2rem',
-          listStyle: 'none'
-        }}
-      >
-        {[
-          'As security checks are conducted, kindly assist the police and private security officers.',
-          'To protect your safety, the organisers reserve the right to stop and search anyone entering the event.',
-          'Consuming any illegal substances is strictly prohibited.',
-          'It is completely forbidden to carry food, drink, cigarettes, firearms, inflammables, and illegal drugs.',
-          'The organiser disclaims liability for any injury, loss, or theft of the ticket holder\'s personal property.',
-          'If there is any type of behavioural infraction, any person may be asked to leave the venue without being responsible for a refund. This choice is final and legally binding and lies with the conference and venue management.',
-          'Attendees are expected to follow all general venue and attendee guidelines.'
-        ].map((rule, idx) => (
-          <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '0.7rem' }}>
-            <span style={{
-              display: 'inline-block',
-              width: '0.85em',
-              height: '0.85em',
-              background: '#e62b1e',
-              borderRadius: '50%',
-              marginRight: '1em',
-              marginTop: '0.45em',
-              flexShrink: 0
-            }}></span>
-            <span>{rule}</span>
-          </li>
-        ))}
-      </ul>
+    <div className="bg-[#fcfcfc] min-h-screen py-16 px-4 font-sans">
+      <div className="max-w-4xl mx-auto space-y-12">
+        <RuleCard title="Event Rules & Guidelines" items={rulesList} />
+        <RuleCard title="Safety & Security" items={safetyList} />
+      </div>
     </div>
   );
 }

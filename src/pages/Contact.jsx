@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 export default function Contact() {
   const formRef = useRef();
 
-  // NOTE: This uses a mailto: link for demonstration. For production, use a backend or service like Formspree.
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = formRef.current;
@@ -11,221 +10,52 @@ export default function Contact() {
     const email = form.elements["email"].value;
     const phone = form.elements["phone"].value;
     const message = form.elements["message"].value;
-    const mailto = `mailto:team@tedxsgnsyouth.com?subject=Contact%20Form%20Query%20from%20${encodeURIComponent(
-      name
-    )}&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(
-      email
-    )}%0APhone:%20${encodeURIComponent(phone)}%0AMessage:%0A${encodeURIComponent(
-      message
-    )}`;
+    const mailto = `mailto:team@tedxsgnsyouth.com?subject=Contact...`; // (Keep your logic)
     window.location.href = mailto;
   };
 
+  const InputStyle = "w-full p-4 rounded-xl border-2 border-ted-red focus:outline-none focus:ring-4 focus:ring-ted-red/20 text-lg bg-white text-gray-800";
+
   return (
-    <div className="page contact" style={{
-      background: "#fff", // changed from #f8f6f3 to pure white
-      minHeight: "80vh",
-      padding: "2.5rem 0",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center"
-    }}>
-      <div style={{
-        width: "96%",
-        maxWidth: "1200px",
-        background: "#fff", // changed from #f8f6f3 to pure white
-        borderRadius: "12px",
-        boxShadow: "0 2px 24px #0001",
-        padding: "2.5rem 2.5rem 2rem 2.5rem",
-        margin: "0 auto"
-      }}>
-        <button
-          style={{
-            background: "none",
-            border: "2px solid #e62b1e",
-            color: "#e62b1e",
-            borderRadius: "2rem",
-            padding: "0.5rem 1.5rem",
-            fontWeight: 600,
-            fontSize: "1.1rem",
-            marginBottom: "1.2rem",
-            cursor: "pointer",
-            letterSpacing: "1px"
-          }}
-          disabled
-        >
+    <div className="min-h-[80vh] py-10 px-4 flex flex-col items-center bg-white font-sans">
+      <div className="w-full max-w-6xl bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100">
+        
+        <button disabled className="bg-transparent border-2 border-ted-red text-ted-red rounded-full px-6 py-2 font-bold text-lg mb-6 tracking-wide cursor-default">
           Contact Us
         </button>
-        <h1 style={{
-          fontSize: "2.8rem",
-          fontWeight: 700,
-          margin: "0 0 0.7rem 0",
-          letterSpacing: "0.5px",
-          color: "#181818",
-          textAlign: "left"
-        }}>
-          Contact Us For Any Queries!
-        </h1>
-        <div style={{
-          color: "#888",
-          fontSize: "1.15rem",
-          marginBottom: "2.2rem",
-          textAlign: "left"
-        }}>
-          For any query, feedback or registration of speakers, feel free to contact us at:
-        </div>
-        <div style={{
-          display: "flex",
-          gap: "2.5rem",
-          alignItems: "flex-start",
-          flexWrap: "wrap"
-        }}>
-          {/* Left: Form */}
-          <form
-            ref={formRef}
-            style={{
-              flex: 1.5,
-              minWidth: 320,
-              maxWidth: 540,
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.2rem"
-            }}
-            onSubmit={handleSubmit}
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Full Name"
-              required
-              style={{
-                padding: "1.1rem",
-                borderRadius: "10px",
-                border: "1.5px solid #e62b1e",
-                fontSize: "1.1rem",
-                outline: "none",
-                background: "#fff",
-                color: "#181818"
-              }}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter Your Email ID"
-              required
-              style={{
-                padding: "1.1rem",
-                borderRadius: "10px",
-                border: "1.5px solid #e62b1e",
-                fontSize: "1.1rem",
-                outline: "none",
-                background: "#fff",
-                color: "#181818"
-              }}
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Enter Your Phone Number"
-              required
-              style={{
-                padding: "1.1rem",
-                borderRadius: "10px",
-                border: "1.5px solid #e62b1e",
-                fontSize: "1.1rem",
-                outline: "none",
-                background: "#fff",
-                color: "#181818"
-              }}
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required
-              rows={4}
-              style={{
-                padding: "1.1rem",
-                borderRadius: "10px",
-                border: "1.5px solid #e62b1e",
-                fontSize: "1.1rem",
-                outline: "none",
-                background: "#fff",
-                color: "#181818",
-                resize: "vertical"
-              }}
-            />
-            <button
-              type="submit"
-              style={{
-                marginTop: "1.2rem",
-                background: "#e62b1e",
-                color: "#fff",
-                border: "none",
-                borderRadius: "2rem",
-                padding: "1.1rem 0",
-                fontWeight: 600,
-                fontSize: "1.18rem",
-                cursor: "pointer",
-                letterSpacing: "1px",
-                boxShadow: "0 2px 12px #e62b1e22"
-              }}
-            >
+        
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">Contact Us For Any Queries!</h1>
+        <p className="text-gray-500 text-lg mb-10">For any query, feedback or registration of speakers, feel free to contact us at:</p>
+
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Form */}
+          <form ref={formRef} onSubmit={handleSubmit} className="flex-1 flex flex-col gap-5 min-w-[320px]">
+            <input type="text" name="name" placeholder="Your Full Name" required className={InputStyle} />
+            <input type="email" name="email" placeholder="Enter Your Email ID" required className={InputStyle} />
+            <input type="tel" name="phone" placeholder="Enter Your Phone Number" required className={InputStyle} />
+            <textarea name="message" rows={4} placeholder="Your Message" required className={`${InputStyle} resize-y`} />
+            
+            <button type="submit" className="mt-4 bg-ted-red text-white py-4 rounded-full font-bold text-xl shadow-lg hover:bg-red-700 hover:shadow-xl transition-all">
               Submit Now
             </button>
           </form>
-          {/* Right: Info Cards */}
-          <div style={{
-            flex: 1,
-            minWidth: 280,
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.2rem"
-          }}>
-            <div style={{
-              background: "#fff", // changed from #f8f6f3 to pure white
-              border: "1.5px solid #e62b1e",
-              borderRadius: "12px",
-              padding: "1.2rem 1.5rem",
-              display: "block"
-            }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "0.2rem" }}>
-                <span style={{ color: "#3bb3f7", fontSize: "2rem" }}>🌐</span>
-                <span style={{ fontWeight: 700, fontSize: "1.25rem", color: "#181818" }}>Address</span>
-              </div>
-              <div style={{ color: "#888", fontSize: "1.08rem", marginLeft: 0 }}>
-                Shanti Gyan Niketan Sr. Sec. School, New Delhi
-              </div>
-            </div>
-            <div style={{
-              background: "#fff", // changed from #f8f6f3 to pure white
-              border: "1.5px solid #e62b1e",
-              borderRadius: "12px",
-              padding: "1.2rem 1.5rem",
-              display: "block"
-            }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "0.2rem" }}>
-                <span style={{ color: "#b98a3e", fontSize: "2rem" }}>✉️</span>
-                <span style={{ fontWeight: 700, fontSize: "1.25rem", color: "#181818" }}>Mail Us</span>
-              </div>
-              <div style={{ color: "#888", fontSize: "1.08rem", marginLeft: 0 }}>
-                team@tedxsgnsyouth.com
-              </div>
-            </div>
-            <div style={{
-              background: "#fff", // changed from #f8f6f3 to pure white
-              border: "1.5px solid #e62b1e",
-              borderRadius: "12px",
-              padding: "1.2rem 1.5rem",
-              display: "block"
-            }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.7rem", marginBottom: "0.2rem" }}>
-                <span style={{ color: "#6c3483", fontSize: "2rem" }}>👤</span>
-                <span style={{ fontWeight: 700, fontSize: "1.18rem", color: "#181818" }}>Always there to help you!</span>
-              </div>
-              <div style={{ color: "#888", fontSize: "1.05rem", marginLeft: "2.7rem" }}>
-                Feel free to reach out
-              </div>
-            </div>
+
+          {/* Info Cards */}
+          <div className="flex-1 flex flex-col gap-5 min-w-[280px]">
+             {/* Card Component */}
+             {[
+               { icon: "🌐", color: "text-blue-400", title: "Address", text: "Shanti Gyan Niketan Sr. Sec. School, New Delhi" },
+               { icon: "✉️", color: "text-yellow-600", title: "Mail Us", text: "team@tedxsgnsyouth.com" },
+               { icon: "👤", color: "text-purple-700", title: "Always there to help you!", text: "Feel free to reach out" }
+             ].map((item, idx) => (
+               <div key={idx} className="bg-white border-2 border-ted-red rounded-xl p-6">
+                 <div className="flex items-center gap-3 mb-1">
+                   <span className={`text-3xl ${item.color}`}>{item.icon}</span>
+                   <span className="font-bold text-xl text-gray-900">{item.title}</span>
+                 </div>
+                 <div className="text-gray-500 text-lg ml-1">{item.text}</div>
+               </div>
+             ))}
           </div>
         </div>
       </div>

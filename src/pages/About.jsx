@@ -1,70 +1,80 @@
+import React from 'react';
+
+// Reusable Component for consistent look
+const SectionCard = ({ title, children }) => (
+  <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 text-center hover:shadow-[0_8px_30px_rgb(230,43,30,0.1)] transition-shadow duration-300">
+    <h2 className="text-2xl md:text-3xl font-bold text-ted-red mb-8 uppercase tracking-wide">
+      {title}
+    </h2>
+    <div className="text-gray-700 text-lg leading-loose space-y-6 text-justify">
+      {children}
+    </div>
+  </div>
+);
+
 export default function About() {
   return (
-    <div className="page about" style={{minHeight: "70vh", maxWidth: 800, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", padding: '1.2rem 0.5rem'}}>
-      <div style={{position: "relative", zIndex: 1, width: "100%"}}>
-        <h1 style={{ fontSize: '2.2rem', fontWeight: 900, textAlign: 'center', marginBottom: '1.2rem', letterSpacing: '1px', color: '#e62b1e', fontFamily: 'Montserrat, Arial, sans-serif' }}>
-          About TED<span style={{color:'#e62b1e'}}>x</span>SGNS Youth
+    <div className="bg-[#fcfcfc] min-h-screen font-sans py-16 px-4">
+      
+      {/* Page Header */}
+      <div className="text-center mb-16">
+        <div className="text-ted-red font-bold tracking-widest uppercase mb-2 text-sm md:text-base">
+          About
+        </div>
+        <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 uppercase tracking-tight">
+          About TED<span className="text-ted-red">x</span>SGNS Youth
         </h1>
-        <div className="animated-gradient-divider section-bar" />
-        <div style={{ position: "relative", width: "100%", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-          {/* Watermark logo in the center, behind About SGNS content */}
-          <img
-            src="image3.jpg"
-            alt="TEDxSGNS Youth Logo Watermark"
-            style={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "240px",
-              height: "240px",
-              opacity: 0.13,
-              pointerEvents: "none",
-              zIndex: 0,
-              objectFit: "contain",
-              userSelect: "none"
-            }}
-          />
-          <div style={{
-            position: "relative",
-            zIndex: 1,
-            maxWidth: 900,
-            margin: '0 auto',
-            textAlign: 'center',
-            fontSize: '1.08rem',
-            color: '#222',
-            fontWeight: 400,
-            lineHeight: 1.7,
-            fontFamily: 'Montserrat, Arial, sans-serif',
-            background: 'rgba(255,255,255,0.97)',
-            borderRadius: '12px',
-            padding: '1.2rem 0.7rem',
-            boxShadow: '0 2px 12px #e62b1e11'
-          }}>
-            <p style={{marginBottom: '1.1rem', fontWeight: 600, color: '#e62b1e', fontSize: '1.13rem', letterSpacing: '0.5px'}}>About SGNS</p>
-            <p style={{marginBottom: '1.1rem'}}>Shanti Gyan Niketan Sr. Sec. School, the proud host of TEDxSGNS Youth, has been a leading institution in nurturing holistic development for decades. Situated in the heart of Dwarka, the school combines academic excellence with a culture of social responsibility and innovation. Our institution believes that meaningful change begins with empowered young minds — and TEDxSGNS Youth is a manifestation of that belief.</p>
-            <p style={{marginBottom: '1.1rem'}}>Shanti Gyan Niketan Sr. Sec. Public School (SGNS), established in 1989, stands as a beacon of academic excellence and holistic development in the region. Founded by the visionary Shri Raj Kumar Khurana, SGNS was born from a dream to provide value-based education that empowers students not only intellectually but also morally and socially. Over the decades, SGNS has cultivated an environment where tradition meets innovation. The school has consistently delivered stellar results in CBSE board examinations, along with notable achievements in national-level competitive exams like NEET and JEE. At the same time, the institution emphasizes character-building, leadership, sportsmanship, and creativity through a rich array of co-curricular activities. With a dedicated leadership team, dynamic faculty, and a progressive vision, SGNS continues to mold young minds into responsible citizens who are equipped to contribute meaningfully to society. The school's motto is not just to teach, but to inspire—and this has remained its guiding force for over 35 years.</p>
-            <p style={{marginBottom: '1.1rem'}}>In alignment with its vision of empowering young voices and creating platforms for transformative dialogue, SGNS is now proud to host the TEDxSGNS Youth event—an initiative that truly reflects the spirit of forward-thinking and global engagement. This landmark event will bring together bright young minds, thought leaders, and changemakers to share powerful stories and fresh ideas that challenge perspectives and ignite curiosity. TEDxSGNS Youth is more than just an event; it is a celebration of ideas worth spreading, curated with the passion and purpose that SGNS has always stood for. By providing students and the wider community with an opportunity to engage in meaningful conversations, the event reinforces SGNS's commitment to nurturing future-ready individuals who are not only academically equipped but also socially aware and globally connected. TEDxSGNS Youth marks a new chapter in the institution's legacy—where learning goes beyond classrooms and ideas take center stage.</p>
-          </div>
+        {/* Gradient Divider */}
+        <div className="h-1.5 w-24 mx-auto rounded-full bg-gradient-to-r from-orange-400 via-ted-red to-pink-500" />
+      </div>
+
+      <div className="max-w-5xl mx-auto space-y-16 relative">
+        
+        {/* Background Watermark */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] opacity-[0.03] pointer-events-none z-0">
+           <img src="/image3.jpg" alt="Watermark" className="w-full h-full object-contain" />
         </div>
-        <div style={{height: "2rem"}}></div>
-        <div style={{color: "#e62b1e", fontWeight: "bold", fontSize: "1.1rem", textAlign: 'center', fontFamily: 'Montserrat, Arial, sans-serif', marginBottom: '1.5rem'}}>
-          Join us in our journey to spark change and reimagine diversity!
+
+        {/* Section 1: About SGNS */}
+        <div className="relative z-10">
+          <SectionCard title="About SGNS">
+            <p>
+              Shanti Gyan Niketan Sr. Sec. School, the proud host of TEDxSGNS Youth, has been a leading institution in nurturing holistic development for decades. Situated in the heart of Dwarka, the school combines academic excellence with a culture of social responsibility and innovation. Our institution believes that meaningful change begins with empowered young minds — and TEDxSGNS Youth is a manifestation of that belief.
+            </p>
+            <p>
+              Shanti Gyan Niketan Sr. Sec. Public School (SGNS), established in 1989, stands as a beacon of academic excellence and holistic development in the region. Founded by the visionary Shri Raj Kumar Khurana, SGNS was born from a dream to provide value-based education that empowers students not only intellectually but also morally and socially. Over the decades, SGNS has cultivated an environment where tradition meets innovation.
+            </p>
+            <p>
+              In alignment with its vision of empowering young voices and creating platforms for transformative dialogue, SGNS is now proud to host the TEDxSGNS Youth event—an initiative that truly reflects the spirit of forward-thinking and global engagement. This landmark event will bring together bright young minds, thought leaders, and changemakers to share powerful stories and fresh ideas that challenge perspectives and ignite curiosity.
+            </p>
+          </SectionCard>
         </div>
-        <div style={{height: "2rem"}}></div>
-        <section className="theme-section">
-          <h2 style={{ textAlign: 'center', fontWeight: 800, fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1.2rem', color: '#e62b1e', fontFamily: 'Montserrat, Arial, sans-serif' }}>
-            Theme: <span style={{ color: '#e62b1e' }}>Reimagine Diversity</span>
-          </h2>
-          <div className="upes-gradient-bar" style={{ width: '60%', height: '8px', margin: '1.2rem auto 2.2rem auto', borderRadius: '6px' }} />
-          <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center', fontSize: '1.08rem', color: '#222', fontWeight: 400, lineHeight: 1.7, fontFamily: 'Montserrat, Arial, sans-serif', background: 'rgba(255,255,255,0.97)', borderRadius: '12px', padding: '1.2rem 0.7rem', boxShadow: '0 2px 12px #e62b1e11' }}>
-            This year's theme, "Reimagine Diversity," is not just a call to reflect — it's a challenge to reconstruct, and revolutionize how we understand inclusion and identity in a changing world. It goes far beyond checklists or superficial representation. It's about creating spaces where difference is not just accepted but celebrated as the very foundation of creativity, resilience, and growth.<br /><br />
-            To "reimagine" is to move past inherited assumptions — about race, gender, ability, culture, orientation, economic background, or learning style — and to embrace the possibility that true innovation emerges from the intersections of our varied experiences. Whether it's within classrooms, workplaces, homes, or communities, the theme encourages us to see diversity as a mindset — a lens through which we approach problem-solving, leadership, empathy, and storytelling.<br /><br />
-            "Reimagine Diversity" dares us to look at what has been invisible: the quiet voices, the unconventional misfits, the unheard narratives — and bring them into the spotlight. It is a theme that opens up conversations about neurodiversity, intersectionality, global cultures, gender fluidity, differing abilities, and more. By doing so, we aim to foster environments where everyone has the right not just to participate, but to thrive.<br /><br />
-            The theme is especially timely in a world where the boundaries of identity are increasingly fluid and the need for empathy, understanding, and equity has never been greater. At TEDxSGNS Youth, we hope to transform where young changemakers, innovators, creators, and dreamers come together to redefine what inclusion looks like — and to spark a movement that values differences not as obstacles, but as opportunities.<br /><br />
-            With talks that challenge norms, ideas that defy stereotypes, and stories that expand horizons, "Reimagine Diversity" becomes more than just a theme — it becomes a transformative experience. One that redefines how we lead, learn, create, and connect.
-          </div>
-        </section>
+
+        {/* Transitional Text */}
+        <div className="text-center relative z-10">
+             <div className="inline-block px-6 py-2 rounded-full bg-red-50 text-ted-red font-bold text-lg md:text-xl shadow-sm border border-red-100">
+               Join us as we push thinking past the familiar and go Beyond Obvious.
+             </div>
+        </div>
+
+        {/* Section 2: Theme */}
+        <div className="relative z-10">
+          <SectionCard title="Theme: Beyond Obvious">
+            <p>
+              Beyond Obvious is an open and inclusive theme focused on youth, inviting speakers and audiences to move beyond first impressions, accepted narratives, and surface-level thinking toward deeper insight, fresh perspective, and meaningful possibility. It strongly reflects the spirit of Ideas Worth Spreading, creating space for ideas that challenge assumptions and reframe how we see ourselves and the world around us.
+            </p>
+            <p>
+              Intentionally expansive, Beyond Obvious welcomes ideas from all walks of life—across science and art, technology and tradition, education, entrepreneurship, social change, and lived experience—so long as they push thinking past the familiar. This theme calls on speakers to explore the "why" beneath the "what" and the possibility beneath the problem.
+            </p>
+            <p>
+              To go "Beyond Obvious" is to challenge the world as it appears and illuminate what lies beneath. It is an invitation to the unconventional misfits and the unheard narratives to take the spotlight. By doing so, we aim to foster environments where everyone has the right to move past surface-level interactions and engage with the true essence of ideas.
+            </p>
+            <p className="font-semibold text-gray-900">
+              With talks that challenge norms and stories that expand horizons, "Beyond Obvious" becomes more than just a theme—it becomes a transformative experience that redefines how we lead, learn, create, and connect.
+            </p>
+          </SectionCard>
+        </div>
+
       </div>
     </div>
   );
