@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 export default function Speakers() {
-  const [activeYear, setActiveYear] = useState(2025);
+  // Changed default state from 2025 to 2026
+  const [activeYear, setActiveYear] = useState(2026);
 
   const speakers2025 = [
     { name: "Aanchal Jain", title: "Founder - Magical Parenting Want ", img: "/Speakers/AanchalJain.jpg", desc: "" },
@@ -26,7 +27,7 @@ export default function Speakers() {
     { name: "Sayesha Khurana", title: "Springdales School, New Delhi", img: "/Speakers/SayeshaKhurana.jpg", desc: "" },
     { name: "Sonal Agarwal Rawat", title: "Founder & CEO - MothersVibe Pvt. Ltd.", img: "/Speakers/SonalAgarwalRawat.jpg", desc: "" },
     { name: "Soumya Dhani", title: "Founding Psychologist - SuperHumans Academy", img: "/Speakers/SoumyaDhani.jpg", desc: "" },
-    { name: "Sushmita Tripathi", title: "Manager - American Express", img: "/Speakers/SushmitaTripathi.jpg", desc: "" },
+    { name: "Sushmita Tripathi", title: "Manager - American Express", img: "/Speakers/Sushmita Tripathi.jpg", desc: "" },
     { name: "Tiyana Borele", title: "Student - Vibgyor World Academy, Nagpur", img: "/Speakers/TiyanaBorele.jpg", desc: "" },
     { name: "Vanshika Arora", title: "Psychologist - Mindmosaic", img: "/Speakers/VanshikaArora.jpg", desc: "" },
     { name: "Vikash Gupta", title: "Founder & CEO - Ranvik Exports Ltd.", img: "/Speakers/VikashGupta.jpg", desc: "" }
@@ -50,9 +51,9 @@ export default function Speakers() {
     { name: "Nishant Sharma", title: "Founder & Wellness Tech Entrepreneur - AuraEy™ Solutions Limited", img: "/speakers2026/15.png", desc: "Speaker" },
     { name: "Parul Khandelwal", title: "Entrepreneur - Asimit Creations", img: "/speakers2026/16.png", desc: "Speaker" },
     { name: "Prof. (Dr.) Manju Chhugani", title: "Professor & Founder Dean - SNSAH, Jamia Hamdard", img: "/speakers2026/17.png", desc: "Speaker" },
-    { name: "Seema Gill", title: "Founder & CEO - BIGSTORY Network, Screenage Media Pvt. Ltd.", img: "/speakers2026/18.png", desc: "Speaker" },
-    { name: "Sony Goyal", title: "Founder - Punjab100, Prayaas Educational & Charitable Society", img: "/speakers2026/19.png", desc: "Speaker" },
-    { name: "Sukanya Kumar Nambiar", title: "Co-Founder & Director - The Preschool Olympiad, Bharat Shishu Vidya Initiatives Pvt. Ltd.", img: "/speakers2026/20.png", desc: "Speaker" }
+    { name: "Seema Gill", title: "Founder & CEO - BIGSTORY Network, Screenage Media Pvt. Ltd.", img: "/speakers2026/18.jpg", desc: "Speaker" },
+    { name: "Sony Goyal", title: "Founder - Punjab100, Prayaas Educational & Charitable Society", img: "/speakers2026/19.jpg", desc: "Speaker" },
+    { name: "Sukanya Kumar Nambiar", title: "Co-Founder & Director - The Preschool Olympiad, Bharat Shishu Vidya Initiatives Pvt. Ltd.", img: "/speakers2026/20.jpg", desc: "Speaker" }
   ];
 
   const currentSpeakers = activeYear === 2025 ? speakers2025 : speakers2026;
