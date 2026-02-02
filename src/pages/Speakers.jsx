@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function Speakers() {
-  // Changed default state from 2025 to 2026
   const [activeYear, setActiveYear] = useState(2026);
 
   const speakers2025 = [
@@ -33,7 +32,7 @@ export default function Speakers() {
     { name: "Vikash Gupta", title: "Founder & CEO - Ranvik Exports Ltd.", img: "/Speakers/VikashGupta.jpg", desc: "" }
   ];
 
- const speakers2026 = [
+  const speakers2026 = [
     { name: "Anaya Kapur", title: "Student - American School of Dubai, UAE", img: "/speakers2026/1.png", desc: "Speaker" },
     { name: "Anupama Luthra", title: "Co Founder - Bol Mann Se", img: "/speakers2026/2.png", desc: "Speaker" },
     { name: "Dr. Akansha Jain", title: "Founder - Education Future One Stop, EFOS.in", img: "/speakers2026/3.png", desc: "Speaker" },
@@ -94,43 +93,50 @@ export default function Speakers() {
         
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
-          {currentSpeakers.map((sp, i) => (
-            <div 
-              key={`${activeYear}-${i}`} 
-              className="group relative w-full max-w-[320px] bg-[#111] text-white rounded-2xl overflow-hidden shadow-xl border border-gray-800 hover:shadow-2xl hover:shadow-ted-red/20 transition-all duration-500 hover:-translate-y-3"
-            >
-              {/* Image Container */}
-              <div className="w-full h-80 bg-[#222] overflow-hidden relative">
-                <div className="absolute inset-0 bg-ted-red/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                
-                <img 
-                  src={sp.img} 
-                  alt={sp.name} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-[20%]" 
-                  loading="lazy"
-                />
-              </div>
+          {currentSpeakers.map((sp, i) => {
+            // Determines if this is the 2nd to last item in the current array
+            const isSecondToLast = i === currentSpeakers.length - 2;
 
-              {/* Info Container */}
-              <div className="p-6 min-h-[160px] flex flex-col justify-start bg-gradient-to-b from-[#1a1a1a] to-[#000] border-t border-gray-800 relative z-20">
-                <div className="absolute top-0 left-6 -translate-y-1/2 w-10 h-1 bg-ted-red rounded-full shadow-md group-hover:w-20 transition-all duration-300"></div>
+            return (
+              <div 
+                key={`${activeYear}-${i}`} 
+                className={`group relative w-full max-w-[320px] bg-[#111] text-white rounded-2xl overflow-hidden shadow-xl border border-gray-800 hover:shadow-2xl hover:shadow-ted-red/20 transition-all duration-500 hover:-translate-y-3 
+                ${isSecondToLast ? "xl:col-start-2" : ""}
+                `}
+              >
+                {/* Image Container */}
+                <div className="w-full h-80 bg-[#222] overflow-hidden relative">
+                  <div className="absolute inset-0 bg-ted-red/10 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                  
+                  <img 
+                    src={sp.img} 
+                    alt={sp.name} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:grayscale-[20%]" 
+                    loading="lazy"
+                  />
+                </div>
 
-                <div className="mt-2">
-                    {sp.desc && (
-                    <div className="text-[10px] font-bold text-ted-red uppercase tracking-widest mb-1 opacity-90">
-                        {sp.desc}
-                    </div>
-                    )}
-                    <h3 className="text-xl font-black text-white mb-2 leading-tight group-hover:text-ted-red transition-colors duration-300">
-                    {sp.name}
-                    </h3>
-                    <p className="text-gray-400 text-sm font-medium leading-relaxed">
-                    {sp.title}
-                    </p>
+                {/* Info Container */}
+                <div className="p-6 min-h-[160px] flex flex-col justify-start bg-gradient-to-b from-[#1a1a1a] to-[#000] border-t border-gray-800 relative z-20">
+                  <div className="absolute top-0 left-6 -translate-y-1/2 w-10 h-1 bg-ted-red rounded-full shadow-md group-hover:w-20 transition-all duration-300"></div>
+
+                  <div className="mt-2">
+                      {sp.desc && (
+                      <div className="text-[10px] font-bold text-ted-red uppercase tracking-widest mb-1 opacity-90">
+                          {sp.desc}
+                      </div>
+                      )}
+                      <h3 className="text-xl font-black text-white mb-2 leading-tight group-hover:text-ted-red transition-colors duration-300">
+                      {sp.name}
+                      </h3>
+                      <p className="text-gray-400 text-sm font-medium leading-relaxed">
+                      {sp.title}
+                      </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
