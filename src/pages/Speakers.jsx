@@ -33,7 +33,7 @@ export default function Speakers() {
     { name: "Vikash Gupta", title: "Founder & CEO - Ranvik Exports Ltd.", img: "/Speakers/VikashGupta.jpg", desc: "" }
   ];
 
-  const speakers2026 = [
+ const speakers2026 = [
     { name: "Anaya Kapur", title: "Student - American School of Dubai, UAE", img: "/speakers2026/1.png", desc: "Speaker" },
     { name: "Anupama Luthra", title: "Co Founder - Bol Mann Se", img: "/speakers2026/2.png", desc: "Speaker" },
     { name: "Dr. Akansha Jain", title: "Founder - Education Future One Stop, EFOS.in", img: "/speakers2026/3.png", desc: "Speaker" },
@@ -43,7 +43,9 @@ export default function Speakers() {
     { name: "Dr. Poonam", title: "Founder - Awakening With Dr. Poonam", img: "/speakers2026/7.png", desc: "Speaker" },
     { name: "Dr. Shankar Goenka", title: "Managing Director - WOW Go Green", img: "/speakers2026/8.png", desc: "Speaker" },
     { name: "Dr. Sonu Prasad", title: "Founder - Supercoachtalkz", img: "/speakers2026/9.png", desc: "Speaker" },
+    { name: "Gurmeet Singh Arora", title: "Education Leader & Montessori Education Advocate - Bhupindra International Public School & ABC Montessori", img: "/speakers2026/22.png", desc: "Speaker" },
     { name: "Janki Nirmal Pandya", title: "Lead Monitoring and Evaluation - Aditya Birla Education Trust", img: "/speakers2026/10.png", desc: "Speaker" },
+    { name: "Jyoti Sachdeva", title: "Self-love Coach, Crystal & Sound Therapist - Svasutra", img: "/speakers2026/21.png", desc: "Speaker" },
     { name: "King Kaling Porwal", title: "Managing Director - Downtown Lifespaces", img: "/speakers2026/11.png", desc: "Speaker" },
     { name: "Megha Narula", title: "Brand Communication Manager - Bagla Group", img: "/speakers2026/12.png", desc: "Speaker" },
     { name: "Mehtej Singh Sahni", title: "Student - St. George's College, Mussoorie", img: "/speakers2026/13.png", desc: "Speaker" },
@@ -53,9 +55,7 @@ export default function Speakers() {
     { name: "Prof. (Dr.) Manju Chhugani", title: "Professor & Founder Dean - SNSAH, Jamia Hamdard", img: "/speakers2026/17.png", desc: "Speaker" },
     { name: "Seema Gill", title: "Founder & CEO - BIGSTORY Network, Screenage Media Pvt. Ltd.", img: "/speakers2026/18.png", desc: "Speaker" },
     { name: "Sony Goyal", title: "Founder - Punjab100, Prayaas Educational & Charitable Society", img: "/speakers2026/19.png", desc: "Speaker" },
-    { name: "Sukanya Kumar Nambiar", title: "Co-Founder & Director - The Preschool Olympiad, Bharat Shishu Vidya Initiatives Pvt. Ltd.", img: "/speakers2026/20.png", desc: "Speaker" },
-    { name: "Jyoti Sachdeva", title: "Self-love Coach, Crystal & Sound Therapist - Svasutra", img: "/speakers2026/21.jpg", desc: "Speaker" },
-    { name: "Gurmeet Singh Arora", title: "Education Leader & Montessori Education Advocate - Bhupindra International Public School & ABC Montessori", img: "/speakers2026/22.jpg", desc: "Speaker" }
+    { name: "Sukanya Kumar Nambiar", title: "Co-Founder & Director - The Preschool Olympiad, Bharat Shishu Vidya Initiatives Pvt. Ltd.", img: "/speakers2026/20.png", desc: "Speaker" }
 ];
 
   const currentSpeakers = activeYear === 2025 ? speakers2025 : speakers2026;
