@@ -27,7 +27,7 @@ export default function Speakers() {
     { name: "Sayesha Khurana", title: "Springdales School, New Delhi", img: "/Speakers/SayeshaKhurana.jpg", desc: "" },
     { name: "Sonal Agarwal Rawat", title: "Founder & CEO - MothersVibe Pvt. Ltd.", img: "/Speakers/SonalAgarwalRawat.jpg", desc: "" },
     { name: "Soumya Dhani", title: "Founding Psychologist - SuperHumans Academy", img: "/Speakers/SoumyaDhani.jpg", desc: "" },
-    { name: "Sushmita Tripathi", title: "Manager - American Express", img: "/Speakers/Sushmita Tripathi.jpg", desc: "" },
+    { name: "Sushmita Tripathi", title: "Manager - American Express", img: "/Speakers/SushmitaTripathi.jpg", desc: "" },
     { name: "Tiyana Borele", title: "Student - Vibgyor World Academy, Nagpur", img: "/Speakers/TiyanaBorele.jpg", desc: "" },
     { name: "Vanshika Arora", title: "Psychologist - Mindmosaic", img: "/Speakers/VanshikaArora.jpg", desc: "" },
     { name: "Vikash Gupta", title: "Founder & CEO - Ranvik Exports Ltd.", img: "/Speakers/VikashGupta.jpg", desc: "" }
